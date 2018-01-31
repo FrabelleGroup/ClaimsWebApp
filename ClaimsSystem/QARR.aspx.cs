@@ -33,7 +33,7 @@ namespace ClaimsSystem
 
         protected void btnQARR_Create_Click(object sender, EventArgs e)
         {
-            //Get QARR ID from DB
+            //Get QARR ID from DB **ARGEE**
             string _jResponse = _wcf.Set_Qa_Report(0, 0, "", DateTime.Now, "", 0, "", "", "", "", false, false, false, false, false, "", false, false, false, false, false, false, "", "", DateTime.Now, true);
 
             if (_jResponse != "")
@@ -41,7 +41,8 @@ namespace ClaimsSystem
                 dynamic _jData = JsonConvert.DeserializeObject<dynamic>(_jResponse);
                 txtQARR_ID.Text = (string)_jData[0].QARRID;
             }
-
+            //END ARGEE
+            
             MainButton(false, true);
 
             Clear(false);

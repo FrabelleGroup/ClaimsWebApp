@@ -208,7 +208,7 @@ namespace ClaimsSystem.ServiceReference1 {
         System.Threading.Tasks.Task Set_Logistics_BodyReportAsync(int LNCRBodyID, int LNCRHeadID, string DocumentReferenceNo, string ItemCustomer, decimal Quantity, string UnitOfMeasurement, decimal Amount, string Remarks, bool Status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Logistics_HeaderReport", ReplyAction="http://tempuri.org/IClaims/Set_Logistics_HeaderReportResponse")]
-        void Set_Logistics_HeaderReport(
+        string Set_Logistics_HeaderReport(
                     int LNCRHeadID, 
                     int CompanyID, 
                     int SupplierID, 
@@ -237,7 +237,7 @@ namespace ClaimsSystem.ServiceReference1 {
                     bool Status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Logistics_HeaderReport", ReplyAction="http://tempuri.org/IClaims/Set_Logistics_HeaderReportResponse")]
-        System.Threading.Tasks.Task Set_Logistics_HeaderReportAsync(
+        System.Threading.Tasks.Task<string> Set_Logistics_HeaderReportAsync(
                     int LNCRHeadID, 
                     int CompanyID, 
                     int SupplierID, 
@@ -278,10 +278,10 @@ namespace ClaimsSystem.ServiceReference1 {
         System.Threading.Tasks.Task Set_NoticeToExplain_BodyAsync(int OffenseID, int NTEID, string Details, bool Status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_NoticeToExplain_Head", ReplyAction="http://tempuri.org/IClaims/Set_NoticeToExplain_HeadResponse")]
-        void Set_NoticeToExplain_Head(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status);
+        string Set_NoticeToExplain_Head(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status, string IncidentLocation);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_NoticeToExplain_Head", ReplyAction="http://tempuri.org/IClaims/Set_NoticeToExplain_HeadResponse")]
-        System.Threading.Tasks.Task Set_NoticeToExplain_HeadAsync(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status);
+        System.Threading.Tasks.Task<string> Set_NoticeToExplain_HeadAsync(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status, string IncidentLocation);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Qa_Report", ReplyAction="http://tempuri.org/IClaims/Set_Qa_ReportResponse")]
         string Set_Qa_Report(
@@ -607,7 +607,7 @@ namespace ClaimsSystem.ServiceReference1 {
             return base.Channel.Set_Logistics_BodyReportAsync(LNCRBodyID, LNCRHeadID, DocumentReferenceNo, ItemCustomer, Quantity, UnitOfMeasurement, Amount, Remarks, Status);
         }
         
-        public void Set_Logistics_HeaderReport(
+        public string Set_Logistics_HeaderReport(
                     int LNCRHeadID, 
                     int CompanyID, 
                     int SupplierID, 
@@ -634,10 +634,10 @@ namespace ClaimsSystem.ServiceReference1 {
                     string AcknowledgeBy, 
                     string ApprovedBy, 
                     bool Status) {
-            base.Channel.Set_Logistics_HeaderReport(LNCRHeadID, CompanyID, SupplierID, DriverName, Helper, Date, ChargeSlipDate, TransactionDate, DateCreated, Category_Shortages, Category_LateLiquidation, Category_LateArrival, Category_NoShow, Category_LateDelivery, Category_NonDelivery, Category_QualityRelated, Category_Others, Category_OthersRemarks, Penalty_WrittenWarning, Penalty_Charge, Penalty_Others, Penalty_OthersRemarks, PreparedBy, AcknowledgeBy, ApprovedBy, Status);
+            return base.Channel.Set_Logistics_HeaderReport(LNCRHeadID, CompanyID, SupplierID, DriverName, Helper, Date, ChargeSlipDate, TransactionDate, DateCreated, Category_Shortages, Category_LateLiquidation, Category_LateArrival, Category_NoShow, Category_LateDelivery, Category_NonDelivery, Category_QualityRelated, Category_Others, Category_OthersRemarks, Penalty_WrittenWarning, Penalty_Charge, Penalty_Others, Penalty_OthersRemarks, PreparedBy, AcknowledgeBy, ApprovedBy, Status);
         }
         
-        public System.Threading.Tasks.Task Set_Logistics_HeaderReportAsync(
+        public System.Threading.Tasks.Task<string> Set_Logistics_HeaderReportAsync(
                     int LNCRHeadID, 
                     int CompanyID, 
                     int SupplierID, 
@@ -683,12 +683,12 @@ namespace ClaimsSystem.ServiceReference1 {
             return base.Channel.Set_NoticeToExplain_BodyAsync(OffenseID, NTEID, Details, Status);
         }
         
-        public void Set_NoticeToExplain_Head(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status) {
-            base.Channel.Set_NoticeToExplain_Head(NTEID, CompanyID, DATE, EmployeeName, Subject, IncidentDateTime, IncidentSuspensionDays, Remarks, Status);
+        public string Set_NoticeToExplain_Head(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status, string IncidentLocation) {
+            return base.Channel.Set_NoticeToExplain_Head(NTEID, CompanyID, DATE, EmployeeName, Subject, IncidentDateTime, IncidentSuspensionDays, Remarks, Status, IncidentLocation);
         }
         
-        public System.Threading.Tasks.Task Set_NoticeToExplain_HeadAsync(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status) {
-            return base.Channel.Set_NoticeToExplain_HeadAsync(NTEID, CompanyID, DATE, EmployeeName, Subject, IncidentDateTime, IncidentSuspensionDays, Remarks, Status);
+        public System.Threading.Tasks.Task<string> Set_NoticeToExplain_HeadAsync(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status, string IncidentLocation) {
+            return base.Channel.Set_NoticeToExplain_HeadAsync(NTEID, CompanyID, DATE, EmployeeName, Subject, IncidentDateTime, IncidentSuspensionDays, Remarks, Status, IncidentLocation);
         }
         
         public string Set_Qa_Report(

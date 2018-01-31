@@ -362,7 +362,9 @@
   </xs:element>
   <xs:element name="Set_Logistics_HeaderReportResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Set_Logistics_HeaderReportResult" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Set_Cod">
@@ -409,12 +411,15 @@
         <xs:element minOccurs="0" name="IncidentSuspensionDays" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncidentLocation" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Set_NoticeToExplain_HeadResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Set_NoticeToExplain_HeadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="Set_Qa_Report">

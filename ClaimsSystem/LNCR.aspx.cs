@@ -60,6 +60,21 @@ namespace ClaimsSystem
 
         protected void btnLNCR_Create_Click(object sender, EventArgs e)
         {
+         /*   int LNCRHeadID, int CompanyID, int SupplierID, string DriverName, string Helper, DateTime Date
+            , DateTime ChargeSlipDate, DateTime TransactionDate, DateTime DateCreated, bool Category_Shortages, bool Category_LateLiquidation
+            , bool Category_LateArrival, bool Category_NoShow, bool Category_LateDelivery, bool Category_NonDelivery, bool Category_QualityRelated
+            , bool Category_Others, string Category_OthersRemarks, bool Penalty_WrittenWarning, bool Penalty_Charge, bool Penalty_Others
+            , string Penalty_OthersRemarks, string PreparedBy, string AcknowledgeBy, string ApprovedBy, bool Status   */
+            //Get QARR ID from DB **ARGEE**
+           // string _jResponse = _wcf.Set_Qa_Report(0, 0, "", DateTime.Now, "", 0, "", "", "", "", false, false, false, false, false, "", false, false, false, false, false, false, "", "", DateTime.Now, true);
+            string _jResponse = _wcf.Set_Logistics_HeaderReport(0, 0, 0, "", "", DateTime.Now, DateTime.Now, DateTime.Now, DateTime.Now, false, false, false, false, false, false, false, false, "", false, false, false, "", "", "", "", true);
+            if (_jResponse != "")
+            {
+                dynamic _jData = JsonConvert.DeserializeObject<dynamic>(_jResponse);
+                txtLNCR_ID.Text = (string)_jData[0].LNCRHeadID;
+            }
+            //END ARGEE
+
             MainButton(false, true);
 
             Clear();
@@ -98,13 +113,15 @@ namespace ClaimsSystem
                 //  , bool Category_LateLiquidation, bool Category_LateArrival, bool Category_NoShow, bool Category_LateDelivery, bool Category_NonDelivery
                 //  , bool Category_QualityRelated, bool Category_Others, string Category_OthersRemarks, bool Penalty_WrittenWarning, bool Penalty_Charge
                 //  , bool Penalty_Others, string Penalty_OthersRemarks, string PreparedBy, string AcknowledgeBy, string ApprovedBy, bool Status
-                _wcf.Set_Logistics_HeaderReport(Convert.ToInt32(hfLNCRID.Value), 0, ddlLNCR_Trucker.SelectedIndex, txtLNCR_DriverName.Text, txtLNCR_HelperName.Text
+                _wcf.Set_Logistics_HeaderReport(Convert.ToInt32(txtLNCR_ID.Text), 0, ddlLNCR_Trucker.SelectedIndex, txtLNCR_DriverName.Text, txtLNCR_HelperName.Text
                     , DateTime.Now, _gc.ToDateTime(txtLNCR_ChargeSlipDate.Text), _gc.ToDateTime(txtLNCR_TransactionDate.Text), DateTime.Now, chkLNCR_Cat_Shortages.Checked
                     , chkLNCR_Cat_LateLiquidation.Checked, chkLNCR_Cat_LateArrival.Checked, chkLNCR_Cat_NoShow.Checked, chkLNCR_Cat_LateDelivery.Checked, chkLNCR_Cat_NonDelivery.Checked
                     , chkLNCR_Cat_QualityRelated.Checked, chkLNCR_Cat_Others.Checked, txtLNCR_Cat_Others.Text, chkLNCR_Pen_WrittenWarning.Checked, chkLNCR_Pen_Charge.Checked
                     , chkLNCR_Pen_Others.Checked, txtLNCR_Pen_Others.Text, "", "", "", true);
-               
-
+                gvLNCRList.DataSource = Retrieve_Header();
+                gvLNCRList.DataBind();
+                mvLNCR.SetActiveView(vwViewLNCR);
+               //hfLNCRID.Value
                 NotificationModal(false, "", "", false, true);
             
             }
@@ -118,7 +135,6 @@ namespace ClaimsSystem
 
                 MainButton(true, false);
                 Clear();
-
                 mvLNCR.SetActiveView(vwViewLNCR);
             }
 
@@ -131,7 +147,8 @@ namespace ClaimsSystem
 
             MainButton(true, false);
             Clear();
-
+            gvLNCRList.DataSource = Retrieve_Header();
+            gvLNCRList.DataBind();
             mvLNCR.SetActiveView(vwViewLNCR);
         }
 
@@ -155,9 +172,10 @@ namespace ClaimsSystem
 
             try
             {
-                _wcf.Set_Logistics_BodyReport(Convert.ToInt32(hfLNCRBodyID.Value), Convert.ToInt32(hfLNCRID.Value), txtLNCRReport_DocumentReferenceNo.Text, txtLNCRReport_ItemCustomer.Text, Convert.ToDecimal(txtLNCReport_Qty.Text), txtLNCReport_UOM.Text, Convert.ToDecimal(txtLNCReport_Amount.Text), txtLNCReport_Remarks.Text, true);
+                _wcf.Set_Logistics_BodyReport(Convert.ToInt32(hfLNCRBodyID.Value), Convert.ToInt32(txtLNCR_ID.Text), txtLNCRReport_DocumentReferenceNo.Text, txtLNCRReport_ItemCustomer.Text, Convert.ToDecimal(txtLNCReport_Qty.Text), txtLNCReport_UOM.Text, Convert.ToDecimal(txtLNCReport_Amount.Text), txtLNCReport_Remarks.Text, true);
                 gvLNCRDetailReport.DataSource = Retrieve_Body();
                 gvLNCRDetailReport.DataBind();
+                mvLNCR.SetActiveView(vwDetailsLNCR);
             }
             catch (Exception ex) { }
             finally
