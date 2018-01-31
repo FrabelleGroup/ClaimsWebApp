@@ -9,6 +9,8 @@ namespace ClaimsSystem
 {
     public partial class Reports : System.Web.UI.Page
     {
+        _gControls _gc = new _gControls();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
