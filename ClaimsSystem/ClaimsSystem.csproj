@@ -47,6 +47,8 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -177,6 +179,13 @@
     <Content Include="NTE.aspx" />
     <Content Include="QARR.aspx" />
     <Content Include="Reports.aspx" />
+    <Content Include="Service References\ServiceReference1\Claims.disco" />
+    <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <Content Include="TNCR.aspx" />
     <Content Include="UserProfile.aspx" />
     <Content Include="Web.config" />
@@ -236,11 +245,18 @@
       <DependentUpon>ChargeSlip.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="reports\NTE.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NTE.rpt</DependentUpon>
       <SubType>Component</SubType>
+=======
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="TNCR.aspx.cs">
       <DependentUpon>TNCR.aspx</DependentUpon>
@@ -322,6 +338,13 @@
       <DependentUpon>DataReporter.xsd</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\WebApp.Claims.pubxml" />
+    <Content Include="Service References\ServiceReference1\Claims.wsdl" />
+    <None Include="Service References\ServiceReference1\Claims.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\Claims1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -345,6 +368,12 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+>>>>>>> master
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
