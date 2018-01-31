@@ -200,7 +200,7 @@ namespace ClaimsSystem
                 chkLNCR_Pen_Charge.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
                 chkLNCR_Pen_Others.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
                 txtLNCR_Pen_Others.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
-
+                mvLNCR.SetActiveView(vwDetailsLNCR);
             }
         }
 
