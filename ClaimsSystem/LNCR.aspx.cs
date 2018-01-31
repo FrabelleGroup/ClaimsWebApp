@@ -47,6 +47,13 @@ namespace ClaimsSystem
             return headerData;
         }
 
+        public DataTable Retrieve_Body()
+        {
+            string _jsonResponse = _wcf.Get_Logistics_BodyReport(hfLNCRID.Value);
+            var bodyData = JsonConvert.DeserializeObject<DataTable>(_jsonResponse);
+            return bodyData;
+        }
+
         #endregion
 
         #region LNCR Header
@@ -71,18 +78,8 @@ namespace ClaimsSystem
 
         protected void btnLNCRDetails_Submit_Click(object sender, EventArgs e)
         {
-          //  NotificationModal(true, "Confirmation To Save", "Are you sure you want to save this LNC Report?", true, false);
-            //int LNCRHeadID, int CompanyID, int SupplierID, string DriverName, string Helper
-            //  , string Date, string ChargeSlipDate, string TransactionDate, string DateCreated, bool Category_Shortages
-            //  , bool Category_LateLiquidation, bool Category_LateArrival, bool Category_NoShow, bool Category_LateDelivery, bool Category_NonDelivery
-            //  , bool Category_QualityRelated, bool Category_Others, string Category_OthersRemarks, bool Penalty_WrittenWarning, bool Penalty_Charge
-            //  , bool Penalty_Others, string Penalty_OthersRemarks, string PreparedBy, string AcknowledgeBy, string ApprovedBy, bool Status
-            _wcf.Set_Logistics_HeaderReport(Convert.ToInt32(hfLNCRID.Value), 0, ddlLNCR_Trucker.SelectedIndex, txtLNCR_DriverName.Text, txtLNCR_HelperName.Text
-                , DateTime.Now, _gc.ToDateTime(txtLNCR_ChargeSlipDate.Text), _gc.ToDateTime(txtLNCR_TransactionDate.Text), DateTime.Now, chkLNCR_Cat_Shortages.Checked
-                , chkLNCR_Cat_LateLiquidation.Checked, chkLNCR_Cat_LateArrival.Checked, chkLNCR_Cat_NoShow.Checked, chkLNCR_Cat_LateDelivery.Checked, chkLNCR_Cat_NonDelivery.Checked
-                , chkLNCR_Cat_QualityRelated.Checked, chkLNCR_Cat_Others.Checked, txtLNCR_Cat_Others.Text, chkLNCR_Pen_WrittenWarning.Checked, chkLNCR_Pen_Charge.Checked
-                , chkLNCR_Pen_Others.Checked, txtLNCR_Pen_Others.Text, "", "", "", true);
-           //  SET_LOGISTICS_HEADERREPORT _wcf.SaveUpdate_Bank(Convert.ToInt32(hfbankid.Value), txtbankName.Text, txtaccountName.Text, txtaccountNumber.Text, Convert.ToInt32(Session["company"].ToString()), Convert.ToInt32(ddlstatus.SelectedValue), Session["userid"].ToString());
+            NotificationModal(true, "Confirmation To Save", "Are you sure you want to save this LNC Report?", true, false);
+           
         }
 
         protected void btnLNCRDetails_Cancel_Click(object sender, EventArgs e)
@@ -96,9 +93,20 @@ namespace ClaimsSystem
 
             try
             {
-                NotificationModal(false, "", "", false, false);
+                //int LNCRHeadID, int CompanyID, int SupplierID, string DriverName, string Helper
+                //  , string Date, string ChargeSlipDate, string TransactionDate, string DateCreated, bool Category_Shortages
+                //  , bool Category_LateLiquidation, bool Category_LateArrival, bool Category_NoShow, bool Category_LateDelivery, bool Category_NonDelivery
+                //  , bool Category_QualityRelated, bool Category_Others, string Category_OthersRemarks, bool Penalty_WrittenWarning, bool Penalty_Charge
+                //  , bool Penalty_Others, string Penalty_OthersRemarks, string PreparedBy, string AcknowledgeBy, string ApprovedBy, bool Status
+                _wcf.Set_Logistics_HeaderReport(Convert.ToInt32(hfLNCRID.Value), 0, ddlLNCR_Trucker.SelectedIndex, txtLNCR_DriverName.Text, txtLNCR_HelperName.Text
+                    , DateTime.Now, _gc.ToDateTime(txtLNCR_ChargeSlipDate.Text), _gc.ToDateTime(txtLNCR_TransactionDate.Text), DateTime.Now, chkLNCR_Cat_Shortages.Checked
+                    , chkLNCR_Cat_LateLiquidation.Checked, chkLNCR_Cat_LateArrival.Checked, chkLNCR_Cat_NoShow.Checked, chkLNCR_Cat_LateDelivery.Checked, chkLNCR_Cat_NonDelivery.Checked
+                    , chkLNCR_Cat_QualityRelated.Checked, chkLNCR_Cat_Others.Checked, txtLNCR_Cat_Others.Text, chkLNCR_Pen_WrittenWarning.Checked, chkLNCR_Pen_Charge.Checked
+                    , chkLNCR_Pen_Others.Checked, txtLNCR_Pen_Others.Text, "", "", "", true);
+               
 
-                
+                NotificationModal(false, "", "", false, true);
+            
             }
             catch (Exception ex)
             {
@@ -147,7 +155,9 @@ namespace ClaimsSystem
 
             try
             {
-
+                _wcf.Set_Logistics_BodyReport(Convert.ToInt32(hfLNCRBodyID.Value), Convert.ToInt32(hfLNCRID.Value), txtLNCRReport_DocumentReferenceNo.Text, txtLNCRReport_ItemCustomer.Text, Convert.ToDecimal(txtLNCReport_Qty.Text), txtLNCReport_UOM.Text, Convert.ToDecimal(txtLNCReport_Amount.Text), txtLNCReport_Remarks.Text, true);
+                gvLNCRDetailReport.DataSource = Retrieve_Body();
+                gvLNCRDetailReport.DataBind();
             }
             catch (Exception ex) { }
             finally
@@ -200,6 +210,8 @@ namespace ClaimsSystem
                 chkLNCR_Pen_Charge.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
                 chkLNCR_Pen_Others.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
                 txtLNCR_Pen_Others.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
+                gvLNCRDetailReport.DataSource = Retrieve_Body();
+                gvLNCRDetailReport.DataBind();
                 mvLNCR.SetActiveView(vwDetailsLNCR);
             }
         }

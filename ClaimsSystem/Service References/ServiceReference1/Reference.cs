@@ -284,7 +284,7 @@ namespace ClaimsSystem.ServiceReference1 {
         System.Threading.Tasks.Task Set_NoticeToExplain_HeadAsync(int NTEID, int CompanyID, System.DateTime DATE, string EmployeeName, string Subject, System.DateTime IncidentDateTime, string IncidentSuspensionDays, string Remarks, bool Status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Qa_Report", ReplyAction="http://tempuri.org/IClaims/Set_Qa_ReportResponse")]
-        void Set_Qa_Report(
+        string Set_Qa_Report(
                     int QARRID, 
                     int CompanyID, 
                     string ReferenceCode, 
@@ -313,7 +313,7 @@ namespace ClaimsSystem.ServiceReference1 {
                     bool Status);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Qa_Report", ReplyAction="http://tempuri.org/IClaims/Set_Qa_ReportResponse")]
-        System.Threading.Tasks.Task Set_Qa_ReportAsync(
+        System.Threading.Tasks.Task<string> Set_Qa_ReportAsync(
                     int QARRID, 
                     int CompanyID, 
                     string ReferenceCode, 
@@ -691,7 +691,7 @@ namespace ClaimsSystem.ServiceReference1 {
             return base.Channel.Set_NoticeToExplain_HeadAsync(NTEID, CompanyID, DATE, EmployeeName, Subject, IncidentDateTime, IncidentSuspensionDays, Remarks, Status);
         }
         
-        public void Set_Qa_Report(
+        public string Set_Qa_Report(
                     int QARRID, 
                     int CompanyID, 
                     string ReferenceCode, 
@@ -718,10 +718,10 @@ namespace ClaimsSystem.ServiceReference1 {
                     string SummaryReport, 
                     System.DateTime DateCreated, 
                     bool Status) {
-            base.Channel.Set_Qa_Report(QARRID, CompanyID, ReferenceCode, ReferenceDate, IssuedTo, SupplierID, Department, InitiatedBy, NotedBy, Subject, Type_Legal, Type_Product, Type_Procedure, Type_StructuralAndSanitation, Type_Other, Type_OtherRemarks, NC_SupplierServiceProvider, NC_FBC, NC_Toll, NC_ADP, NC_Trucker, NC_Other, NC_OtherRemarks, SummaryReport, DateCreated, Status);
+            return base.Channel.Set_Qa_Report(QARRID, CompanyID, ReferenceCode, ReferenceDate, IssuedTo, SupplierID, Department, InitiatedBy, NotedBy, Subject, Type_Legal, Type_Product, Type_Procedure, Type_StructuralAndSanitation, Type_Other, Type_OtherRemarks, NC_SupplierServiceProvider, NC_FBC, NC_Toll, NC_ADP, NC_Trucker, NC_Other, NC_OtherRemarks, SummaryReport, DateCreated, Status);
         }
         
-        public System.Threading.Tasks.Task Set_Qa_ReportAsync(
+        public System.Threading.Tasks.Task<string> Set_Qa_ReportAsync(
                     int QARRID, 
                     int CompanyID, 
                     string ReferenceCode, 

@@ -4,34 +4,47 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ClaimsSystem.ServiceReference1;
+using Newtonsoft.Json;
 
 namespace ClaimsSystem
 {
     public partial class QARR : System.Web.UI.Page
     {
+        _gControls _gc = new _gControls();
+        ClaimsClient _wcf = new ClaimsClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
                 if (!Page.IsPostBack)
                 {
+                    _gc.DeserializeDataTable(_wcf.Get_Qa_Report(""), gvQARRList);
+
                     MainButton(true, false);
                     mvQARR.SetActiveView(vwViewQARR);
                 }
                 else { }
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch (Exception ex) { }
         }
 
 
         protected void btnQARR_Create_Click(object sender, EventArgs e)
         {
+            //Get QARR ID from DB
+            string _jResponse = _wcf.Set_Qa_Report(0, 0, "", DateTime.Now, "", 0, "", "", "", "", false, false, false, false, false, "", false, false, false, false, false, false, "", "", DateTime.Now, true);
+
+            if (_jResponse != "")
+            {
+                dynamic _jData = JsonConvert.DeserializeObject<dynamic>(_jResponse);
+                txtQARR_ID.Text = (string)_jData[0].QARRID;
+            }
+
             MainButton(false, true);
 
-            Clear();
+            Clear(false);
             mvQARR.SetActiveView(vwDetailsQARR);
         }
 
@@ -74,7 +87,7 @@ namespace ClaimsSystem
                 ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Successfully Saved!');", true);
 
                 MainButton(true, false);
-                Clear();
+                Clear(false);
 
                 mvQARR.SetActiveView(vwViewQARR);
             }
@@ -87,7 +100,7 @@ namespace ClaimsSystem
             NotificationModal(false, "", "", false, false);
 
             MainButton(true, false);
-            Clear();
+            Clear(true);
 
             mvQARR.SetActiveView(vwViewQARR);
         }
@@ -118,9 +131,11 @@ namespace ClaimsSystem
             btnQARRDetails_CancelYes.Visible = _Cancel;
         }
 
-        private void Clear()
+        private void Clear(bool _ClearID)
         {
+            if (_ClearID) { hfQARRID.Value = "0"; txtQARR_ID.Text = ""; }
 
+            //Clear other fields
         }
 
         #endregion

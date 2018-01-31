@@ -508,6 +508,15 @@ namespace ClaimsSystem {
         protected global::System.Web.UI.WebControls.TextBox txtLNCRReport_DocumentReferenceNo;
         
         /// <summary>
+        /// hfLNCRBodyID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfLNCRBodyID;
+        
+        /// <summary>
         /// lblLNCReports_ItemCustomer control.
         /// </summary>
         /// <remarks>

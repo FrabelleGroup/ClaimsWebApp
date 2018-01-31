@@ -230,7 +230,15 @@
                                     HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvLNCRList_RowCommand" OnPageIndexChanging="gvLNCRList_PageIndexChanging"
                                     OnSelectedIndexChanged="gvLNCRList_SelectedIndexChanged">
                                     <Columns>
-
+                                    <asp:BoundField DataField="LNCRBodyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="LNCRHeadID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="DocumentReferenceNo" HeaderText="DocumentReferenceNo" />
+                                    <asp:BoundField DataField="ItemCustomer" HeaderText="ItemCustomer" />
+                                    <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+                                    <asp:BoundField DataField="UnitOfMeasurement" HeaderText="UnitOfMeasurement" />
+                                    <asp:BoundField DataField="Amount" HeaderText="Amount" />
+                                    <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
+                                    <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
 
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
@@ -272,6 +280,7 @@
                                 <div class="col-md-4">
                                     <asp:Label ID="lblLNCReport_DocumentReferenceNo" runat="server" Text="Document Reference No" />
                                     <asp:TextBox ID="txtLNCRReport_DocumentReferenceNo" runat="server" placeholder="Document Reference No" CssClass="form-control" />
+                                                <asp:HiddenField ID="hfLNCRBodyID" value="0" runat="server" Visible="false" />
                                 </div>
                                 <div class="col-md-4">
                                     <asp:Label ID="lblLNCReports_ItemCustomer" runat="server" Text="Item / Customer" />
