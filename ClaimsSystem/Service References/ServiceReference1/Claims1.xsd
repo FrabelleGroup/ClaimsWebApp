@@ -478,4 +478,43 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="Set_Tall_Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TallID" type="xs:int" />
+        <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="TotalAffected" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TotalAffectedAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="InventoryVariance" type="xs:boolean" />
+        <xs:element minOccurs="0" name="RawMaterials" type="xs:boolean" />
+        <xs:element minOccurs="0" name="FinishedGoods" type="xs:boolean" />
+        <xs:element minOccurs="0" name="TechnicalScrap" type="xs:boolean" />
+        <xs:element minOccurs="0" name="YieldVariances" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ConsumptionVariance" type="xs:boolean" />
+        <xs:element minOccurs="0" name="DelayReport" type="xs:boolean" />
+        <xs:element minOccurs="0" name="QADeviation" type="xs:boolean" />
+        <xs:element minOccurs="0" name="WrongLabel" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ShortLacking" type="xs:boolean" />
+        <xs:element minOccurs="0" name="QANonConformance" type="xs:boolean" />
+        <xs:element minOccurs="0" name="WeakSeal" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Bursting" type="xs:boolean" />
+        <xs:element minOccurs="0" name="LoosePack" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Rejects" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Contamination" type="xs:boolean" />
+        <xs:element minOccurs="0" name="SwabGMPSanitation" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Others" type="xs:boolean" />
+        <xs:element minOccurs="0" name="OthersRemarks" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PreparedByID" type="xs:int" />
+        <xs:element minOccurs="0" name="ReceivedByID" type="xs:int" />
+        <xs:element minOccurs="0" name="AcknowledgeByID" type="xs:int" />
+        <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Set_Tall_ReportResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

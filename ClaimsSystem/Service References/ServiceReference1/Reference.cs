@@ -346,6 +346,68 @@ namespace ClaimsSystem.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Qa_Report_Imglnk", ReplyAction="http://tempuri.org/IClaims/Set_Qa_Report_ImglnkResponse")]
         System.Threading.Tasks.Task Set_Qa_Report_ImglnkAsync(int ImgID, int QARRID, string ImgLnk, string FileName, System.DateTime FileDate, bool Status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Tall_Report", ReplyAction="http://tempuri.org/IClaims/Set_Tall_ReportResponse")]
+        void Set_Tall_Report(
+                    int TallID, 
+                    int CompanyID, 
+                    System.DateTime Date, 
+                    string TotalAffected, 
+                    decimal TotalAffectedAmount, 
+                    bool InventoryVariance, 
+                    bool RawMaterials, 
+                    bool FinishedGoods, 
+                    bool TechnicalScrap, 
+                    bool YieldVariances, 
+                    bool ConsumptionVariance, 
+                    bool DelayReport, 
+                    bool QADeviation, 
+                    bool WrongLabel, 
+                    bool ShortLacking, 
+                    bool QANonConformance, 
+                    bool WeakSeal, 
+                    bool Bursting, 
+                    bool LoosePack, 
+                    bool Rejects, 
+                    bool Contamination, 
+                    bool SwabGMPSanitation, 
+                    bool Others, 
+                    string OthersRemarks, 
+                    int PreparedByID, 
+                    int ReceivedByID, 
+                    int AcknowledgeByID, 
+                    bool Status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Tall_Report", ReplyAction="http://tempuri.org/IClaims/Set_Tall_ReportResponse")]
+        System.Threading.Tasks.Task Set_Tall_ReportAsync(
+                    int TallID, 
+                    int CompanyID, 
+                    System.DateTime Date, 
+                    string TotalAffected, 
+                    decimal TotalAffectedAmount, 
+                    bool InventoryVariance, 
+                    bool RawMaterials, 
+                    bool FinishedGoods, 
+                    bool TechnicalScrap, 
+                    bool YieldVariances, 
+                    bool ConsumptionVariance, 
+                    bool DelayReport, 
+                    bool QADeviation, 
+                    bool WrongLabel, 
+                    bool ShortLacking, 
+                    bool QANonConformance, 
+                    bool WeakSeal, 
+                    bool Bursting, 
+                    bool LoosePack, 
+                    bool Rejects, 
+                    bool Contamination, 
+                    bool SwabGMPSanitation, 
+                    bool Others, 
+                    string OthersRemarks, 
+                    int PreparedByID, 
+                    int ReceivedByID, 
+                    int AcknowledgeByID, 
+                    bool Status);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -757,6 +819,70 @@ namespace ClaimsSystem.ServiceReference1 {
         
         public System.Threading.Tasks.Task Set_Qa_Report_ImglnkAsync(int ImgID, int QARRID, string ImgLnk, string FileName, System.DateTime FileDate, bool Status) {
             return base.Channel.Set_Qa_Report_ImglnkAsync(ImgID, QARRID, ImgLnk, FileName, FileDate, Status);
+        }
+        
+        public void Set_Tall_Report(
+                    int TallID, 
+                    int CompanyID, 
+                    System.DateTime Date, 
+                    string TotalAffected, 
+                    decimal TotalAffectedAmount, 
+                    bool InventoryVariance, 
+                    bool RawMaterials, 
+                    bool FinishedGoods, 
+                    bool TechnicalScrap, 
+                    bool YieldVariances, 
+                    bool ConsumptionVariance, 
+                    bool DelayReport, 
+                    bool QADeviation, 
+                    bool WrongLabel, 
+                    bool ShortLacking, 
+                    bool QANonConformance, 
+                    bool WeakSeal, 
+                    bool Bursting, 
+                    bool LoosePack, 
+                    bool Rejects, 
+                    bool Contamination, 
+                    bool SwabGMPSanitation, 
+                    bool Others, 
+                    string OthersRemarks, 
+                    int PreparedByID, 
+                    int ReceivedByID, 
+                    int AcknowledgeByID, 
+                    bool Status) {
+            base.Channel.Set_Tall_Report(TallID, CompanyID, Date, TotalAffected, TotalAffectedAmount, InventoryVariance, RawMaterials, FinishedGoods, TechnicalScrap, YieldVariances, ConsumptionVariance, DelayReport, QADeviation, WrongLabel, ShortLacking, QANonConformance, WeakSeal, Bursting, LoosePack, Rejects, Contamination, SwabGMPSanitation, Others, OthersRemarks, PreparedByID, ReceivedByID, AcknowledgeByID, Status);
+        }
+        
+        public System.Threading.Tasks.Task Set_Tall_ReportAsync(
+                    int TallID, 
+                    int CompanyID, 
+                    System.DateTime Date, 
+                    string TotalAffected, 
+                    decimal TotalAffectedAmount, 
+                    bool InventoryVariance, 
+                    bool RawMaterials, 
+                    bool FinishedGoods, 
+                    bool TechnicalScrap, 
+                    bool YieldVariances, 
+                    bool ConsumptionVariance, 
+                    bool DelayReport, 
+                    bool QADeviation, 
+                    bool WrongLabel, 
+                    bool ShortLacking, 
+                    bool QANonConformance, 
+                    bool WeakSeal, 
+                    bool Bursting, 
+                    bool LoosePack, 
+                    bool Rejects, 
+                    bool Contamination, 
+                    bool SwabGMPSanitation, 
+                    bool Others, 
+                    string OthersRemarks, 
+                    int PreparedByID, 
+                    int ReceivedByID, 
+                    int AcknowledgeByID, 
+                    bool Status) {
+            return base.Channel.Set_Tall_ReportAsync(TallID, CompanyID, Date, TotalAffected, TotalAffectedAmount, InventoryVariance, RawMaterials, FinishedGoods, TechnicalScrap, YieldVariances, ConsumptionVariance, DelayReport, QADeviation, WrongLabel, ShortLacking, QANonConformance, WeakSeal, Bursting, LoosePack, Rejects, Contamination, SwabGMPSanitation, Others, OthersRemarks, PreparedByID, ReceivedByID, AcknowledgeByID, Status);
         }
     }
 }

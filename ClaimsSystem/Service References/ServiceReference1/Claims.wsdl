@@ -162,6 +162,12 @@
   <wsdl:message name="IClaims_Set_Qa_Report_Imglnk_OutputMessage">
     <wsdl:part name="parameters" element="tns:Set_Qa_Report_ImglnkResponse" />
   </wsdl:message>
+  <wsdl:message name="IClaims_Set_Tall_Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Tall_Report" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Tall_Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Tall_ReportResponse" />
+  </wsdl:message>
   <wsdl:portType name="IClaims">
     <wsdl:operation name="Get_ChargeSlip_Body">
       <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_ChargeSlip_Body" message="tns:IClaims_Get_ChargeSlip_Body_InputMessage" />
@@ -266,6 +272,10 @@
     <wsdl:operation name="Set_Qa_Report_Imglnk">
       <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_Qa_Report_Imglnk" message="tns:IClaims_Set_Qa_Report_Imglnk_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_Qa_Report_ImglnkResponse" message="tns:IClaims_Set_Qa_Report_Imglnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Tall_Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_Tall_Report" message="tns:IClaims_Set_Tall_Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_Tall_ReportResponse" message="tns:IClaims_Set_Tall_Report_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IClaims" type="tns:IClaims">
@@ -497,6 +507,15 @@
     </wsdl:operation>
     <wsdl:operation name="Set_Qa_Report_Imglnk">
       <soap:operation soapAction="http://tempuri.org/IClaims/Set_Qa_Report_Imglnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Tall_Report">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_Tall_Report" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

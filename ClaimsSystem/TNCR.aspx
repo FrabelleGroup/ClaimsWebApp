@@ -65,7 +65,7 @@
             </div>
         </asp:View>
         <asp:View ID="vwDetailsTNCR" runat="server">
-            <asp:HiddenField ID="hfTNCRID" runat="server" Visible="false" />
+            <asp:HiddenField ID="hfTNCRID" value="0" runat="server" Visible="false" />
             <div class="row">
                 <div class="col-md-12">
                     <h3>Toll Non-Conformance Report (TNCR)</h3>
@@ -248,10 +248,10 @@
             <br />
             <div class="row">
                 <div class="col-md-2">
-                    <asp:Button ID="btnTNCRDetails_Submit" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Submit" />
+                    <asp:Button ID="btnTNCRDetails_Submit" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Submit" OnClick="btnTNCRDetails_Submit_Click" />
                 </div>
                 <div class="col-md-2">
-                    <asp:Button ID="btnTNCRDetails_Cancel" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="Cancel" />
+                    <asp:Button ID="btnTNCRDetails_Cancel" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="Cancel" OnClick="btnTNCRDetails_Cancel_Click" />
                 </div>
             </div>
             <br />
@@ -276,11 +276,11 @@
                     <div class="row">
                         <div class="col-md-7"></div>
                         <div class="col-md-2">
-                            <asp:Button ID="btnTNCRDetails_SaveYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" />
-                            <asp:Button ID="btnTNCRDetails_CancelYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" />
+                            <asp:Button ID="btnTNCRDetails_SaveYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" OnClick="btnTNCRDetails_SaveYes_Click" />
+                            <asp:Button ID="btnTNCRDetails_CancelYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" OnClick="btnTNCRDetails_CancelYes_Click" />
                         </div>
                         <div class="col-md-2">
-                            <asp:Button ID="btnTNCRDetails_No" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="No" />
+                            <asp:Button ID="btnTNCRDetails_No" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="No" OnClick="btnTNCRDetails_No_Click" />
                         </div>
                     </div>
                     <br />
