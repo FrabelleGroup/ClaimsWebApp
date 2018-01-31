@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Claims" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:46668/Claims.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:46668/Claims.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClaims_Get_ChargeSlip_Body_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ChargeSlip_Body" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_ChargeSlip_Body_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ChargeSlip_BodyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_ChargeSlip_Head_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ChargeSlip_Head" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_ChargeSlip_Head_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ChargeSlip_HeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_CompanyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_CompanyList" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_CompanyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_CompanyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_EmployeeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_EmployeeList" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_EmployeeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_EmployeeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Group_Rights_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Group_Rights" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Group_Rights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Group_RightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Logistics_BodyReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Logistics_BodyReport" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Logistics_BodyReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Logistics_BodyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Logistics_HeaderReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Logistics_HeaderReport" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Logistics_HeaderReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Logistics_HeaderReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Modules_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Modules" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Modules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_ModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Qa_Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Qa_Report" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Qa_Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Qa_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Qa_Report_Imglnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Qa_Report_Imglnk" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Qa_Report_Imglnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Qa_Report_ImglnkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_SupplierList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SupplierList" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_SupplierList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SupplierListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Tall_Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Tall_Report" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Tall_Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Tall_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_User_Accounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_User_Accounts" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_User_Accounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_User_AccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_User_Groups_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_User_Groups" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_User_Groups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_User_GroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Cod_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Cod" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_Cod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_CodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_NoticeToExplain_Body_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_NoticeToExplain_Body" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_NoticeToExplain_Body_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_NoticeToExplain_BodyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_NoticeToExplain_Head_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_NoticeToExplain_Head" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Get_NoticeToExplain_Head_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_NoticeToExplain_HeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_ChargeSlip_Body_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_ChargeSlip_Body" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_ChargeSlip_Body_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_ChargeSlip_BodyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_ChargeSlip_Head_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_ChargeSlip_Head" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_ChargeSlip_Head_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_ChargeSlip_HeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Logistics_BodyReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Logistics_BodyReport" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Logistics_BodyReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Logistics_BodyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Logistics_HeaderReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Logistics_HeaderReport" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Logistics_HeaderReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Logistics_HeaderReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Cod_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Cod" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Cod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_CodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_NoticeToExplain_Body_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_NoticeToExplain_Body" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_NoticeToExplain_Body_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_NoticeToExplain_BodyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_NoticeToExplain_Head_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_NoticeToExplain_Head" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_NoticeToExplain_Head_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_NoticeToExplain_HeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Qa_Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Qa_Report" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Qa_Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Qa_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Qa_Report_Imglnk_InputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Qa_Report_Imglnk" />
+  </wsdl:message>
+  <wsdl:message name="IClaims_Set_Qa_Report_Imglnk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Set_Qa_Report_ImglnkResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClaims">
+    <wsdl:operation name="Get_ChargeSlip_Body">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_ChargeSlip_Body" message="tns:IClaims_Get_ChargeSlip_Body_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_ChargeSlip_BodyResponse" message="tns:IClaims_Get_ChargeSlip_Body_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChargeSlip_Head">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_ChargeSlip_Head" message="tns:IClaims_Get_ChargeSlip_Head_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_ChargeSlip_HeadResponse" message="tns:IClaims_Get_ChargeSlip_Head_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_CompanyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_CompanyList" message="tns:IClaims_Get_CompanyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_CompanyListResponse" message="tns:IClaims_Get_CompanyList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_EmployeeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_EmployeeList" message="tns:IClaims_Get_EmployeeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_EmployeeListResponse" message="tns:IClaims_Get_EmployeeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Group_Rights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Group_Rights" message="tns:IClaims_Get_Group_Rights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_Group_RightsResponse" message="tns:IClaims_Get_Group_Rights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Logistics_BodyReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Logistics_BodyReport" message="tns:IClaims_Get_Logistics_BodyReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_Logistics_BodyReportResponse" message="tns:IClaims_Get_Logistics_BodyReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Logistics_HeaderReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Logistics_HeaderReport" message="tns:IClaims_Get_Logistics_HeaderReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_Logistics_HeaderReportResponse" message="tns:IClaims_Get_Logistics_HeaderReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Modules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Modules" message="tns:IClaims_Get_Modules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_ModulesResponse" message="tns:IClaims_Get_Modules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Qa_Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Qa_Report" message="tns:IClaims_Get_Qa_Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_Qa_ReportResponse" message="tns:IClaims_Get_Qa_Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Qa_Report_Imglnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Qa_Report_Imglnk" message="tns:IClaims_Get_Qa_Report_Imglnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_Qa_Report_ImglnkResponse" message="tns:IClaims_Get_Qa_Report_Imglnk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_SupplierList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_SupplierList" message="tns:IClaims_Get_SupplierList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_SupplierListResponse" message="tns:IClaims_Get_SupplierList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tall_Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Tall_Report" message="tns:IClaims_Get_Tall_Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_Tall_ReportResponse" message="tns:IClaims_Get_Tall_Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Accounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_User_Accounts" message="tns:IClaims_Get_User_Accounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_User_AccountsResponse" message="tns:IClaims_Get_User_Accounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Groups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_User_Groups" message="tns:IClaims_Get_User_Groups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_User_GroupsResponse" message="tns:IClaims_Get_User_Groups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_Cod" message="tns:IClaims_Get_Cod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_CodResponse" message="tns:IClaims_Get_Cod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_NoticeToExplain_Body">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_NoticeToExplain_Body" message="tns:IClaims_Get_NoticeToExplain_Body_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_NoticeToExplain_BodyResponse" message="tns:IClaims_Get_NoticeToExplain_Body_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_NoticeToExplain_Head">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Get_NoticeToExplain_Head" message="tns:IClaims_Get_NoticeToExplain_Head_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Get_NoticeToExplain_HeadResponse" message="tns:IClaims_Get_NoticeToExplain_Head_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_ChargeSlip_Body">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_ChargeSlip_Body" message="tns:IClaims_Set_ChargeSlip_Body_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_ChargeSlip_BodyResponse" message="tns:IClaims_Set_ChargeSlip_Body_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_ChargeSlip_Head">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_ChargeSlip_Head" message="tns:IClaims_Set_ChargeSlip_Head_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_ChargeSlip_HeadResponse" message="tns:IClaims_Set_ChargeSlip_Head_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Logistics_BodyReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_Logistics_BodyReport" message="tns:IClaims_Set_Logistics_BodyReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_Logistics_BodyReportResponse" message="tns:IClaims_Set_Logistics_BodyReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Logistics_HeaderReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_Logistics_HeaderReport" message="tns:IClaims_Set_Logistics_HeaderReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_Logistics_HeaderReportResponse" message="tns:IClaims_Set_Logistics_HeaderReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_Cod" message="tns:IClaims_Set_Cod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_CodResponse" message="tns:IClaims_Set_Cod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_NoticeToExplain_Body">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_NoticeToExplain_Body" message="tns:IClaims_Set_NoticeToExplain_Body_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_NoticeToExplain_BodyResponse" message="tns:IClaims_Set_NoticeToExplain_Body_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_NoticeToExplain_Head">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_NoticeToExplain_Head" message="tns:IClaims_Set_NoticeToExplain_Head_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_NoticeToExplain_HeadResponse" message="tns:IClaims_Set_NoticeToExplain_Head_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Qa_Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_Qa_Report" message="tns:IClaims_Set_Qa_Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_Qa_ReportResponse" message="tns:IClaims_Set_Qa_Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Qa_Report_Imglnk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaims/Set_Qa_Report_Imglnk" message="tns:IClaims_Set_Qa_Report_Imglnk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaims/Set_Qa_Report_ImglnkResponse" message="tns:IClaims_Set_Qa_Report_Imglnk_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClaims" type="tns:IClaims">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_ChargeSlip_Body">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_ChargeSlip_Body" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChargeSlip_Head">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_ChargeSlip_Head" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_CompanyList">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_CompanyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_EmployeeList">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_EmployeeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Group_Rights">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Group_Rights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Logistics_BodyReport">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Logistics_BodyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Logistics_HeaderReport">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Logistics_HeaderReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Modules">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Modules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Qa_Report">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Qa_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Qa_Report_Imglnk">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Qa_Report_Imglnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_SupplierList">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_SupplierList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tall_Report">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Tall_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Accounts">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_User_Accounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Groups">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_User_Groups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cod">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_Cod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_NoticeToExplain_Body">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_NoticeToExplain_Body" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_NoticeToExplain_Head">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Get_NoticeToExplain_Head" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_ChargeSlip_Body">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_ChargeSlip_Body" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_ChargeSlip_Head">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_ChargeSlip_Head" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Logistics_BodyReport">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_Logistics_BodyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Logistics_HeaderReport">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_Logistics_HeaderReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cod">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_Cod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_NoticeToExplain_Body">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_NoticeToExplain_Body" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_NoticeToExplain_Head">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_NoticeToExplain_Head" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Qa_Report">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_Qa_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Qa_Report_Imglnk">
+      <soap:operation soapAction="http://tempuri.org/IClaims/Set_Qa_Report_Imglnk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Claims">
+    <wsdl:port name="BasicHttpBinding_IClaims" binding="tns:BasicHttpBinding_IClaims">
+      <soap:address location="http://localhost:46668/Claims.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

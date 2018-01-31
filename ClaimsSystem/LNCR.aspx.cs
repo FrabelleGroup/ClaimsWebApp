@@ -190,16 +190,16 @@ namespace ClaimsSystem
                 chkLNCR_Cat_Shortages.Checked = _gc.Load_CheckBox(_row.Cells[9].Text.Replace("&nbsp;", ""));
                 chkLNCR_Cat_LateDelivery.Checked = _gc.Load_CheckBox(_row.Cells[13].Text.Replace("&nbsp;", ""));
                 chkLNCR_Cat_LateLiquidation.Checked = _gc.Load_CheckBox(_row.Cells[10].Text.Replace("&nbsp;", ""));
-                chkLNCR_Cat_NonDelivery = _row.Cells[0].Text.Replace("&nbsp;", "");
-                chkLNCR_Cat_LateArrival = _row.Cells[0].Text.Replace("&nbsp;", "");
-                chkLNCR_Cat_QualityRelated = _row.Cells[0].Text.Replace("&nbsp;", "");
-                chkLNCR_Cat_NoShow = _row.Cells[0].Text.Replace("&nbsp;", "");
-                chkLNCR_Cat_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
-                txtLNCR_Cat_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
-                chkLNCR_Pen_WrittenWarning = _row.Cells[0].Text.Replace("&nbsp;", "");
-                chkLNCR_Pen_Charge = _row.Cells[0].Text.Replace("&nbsp;", "");
-                chkLNCR_Pen_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
-                txtLNCR_Pen_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Cat_NonDelivery.Checked = _gc.Load_CheckBox(_row.Cells[14].Text.Replace("&nbsp;", ""));
+                chkLNCR_Cat_LateArrival.Checked = _gc.Load_CheckBox(_row.Cells[11].Text.Replace("&nbsp;", ""));
+                chkLNCR_Cat_QualityRelated.Checked = _gc.Load_CheckBox(_row.Cells[15].Text.Replace("&nbsp;", ""));
+                chkLNCR_Cat_NoShow.Checked = _gc.Load_CheckBox(_row.Cells[12].Text.Replace("&nbsp;", ""));
+                chkLNCR_Cat_Others.Checked = _gc.Load_CheckBox(_row.Cells[16].Text.Replace("&nbsp;", ""));
+                txtLNCR_Cat_Others.Text = _row.Cells[17].Text.Replace("&nbsp;", "");
+                chkLNCR_Pen_WrittenWarning.Checked = _gc.Load_CheckBox(_row.Cells[18].Text.Replace("&nbsp;", ""));
+                chkLNCR_Pen_Charge.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
+                chkLNCR_Pen_Others.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
+                txtLNCR_Pen_Others.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
 
             }
         }

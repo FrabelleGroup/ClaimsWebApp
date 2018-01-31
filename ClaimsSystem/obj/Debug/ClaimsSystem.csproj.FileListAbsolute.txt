@@ -5,3 +5,10 @@ C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsSystem\bin\Newto
 C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsSystem\obj\Debug\ClaimsSystem.dll
 C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsSystem\obj\Debug\ClaimsSystem.pdb
 C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsSystem\obj\Debug\ClaimsSystem.csprojResolveAssemblyReference.cache
+C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\obj\Debug\ClaimsSystem.csprojResolveAssemblyReference.cache
+C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\obj\Debug\ClaimsSystem.dll
+C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\obj\Debug\ClaimsSystem.pdb
+C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\ClaimsSystem.dll
+C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\ClaimsSystem.pdb
+C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\Newtonsoft.Json.dll
+C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\Newtonsoft.Json.xml
