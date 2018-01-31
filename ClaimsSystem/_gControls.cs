@@ -60,17 +60,38 @@ namespace ClaimsSystem
 
         public int ToInt32(string inputString)
         {
-            return Convert.ToInt32(inputString);
+            try
+            {
+                return Convert.ToInt32(inputString);
+            }
+            catch { return 0; }
         }
 
         public decimal ToDecimal(string inputString)
         {
-            return Convert.ToDecimal(inputString);
+            try
+            {
+                return Convert.ToDecimal(inputString);
+            }
+            catch { return 0; }
         }
 
         public bool ToBoolean(string inputString)
         {
-            return Convert.ToBoolean(inputString);
+            try
+            {
+                return Convert.ToBoolean(inputString);
+            }
+            catch { return false; }
+        }
+
+        public DateTime ToDateTime(string inputString)
+        {
+            try
+            {
+                return Convert.ToDateTime(inputString);
+            }
+            catch { return DateTime.Now; }
         }
 
         public string RemoveSpaceAfter(string inputString)
