@@ -175,7 +175,33 @@ namespace ClaimsSystem
 
         protected void gvLNCRList_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            if (e.CommandName == "Select")
+            {
+                int _index = Convert.ToInt32(e.CommandName);
+                GridViewRow _row = gvLNCRList.Rows[_index];
+                hfLNCRID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
+                txtLNCR_ID.Text= _row.Cells[0].Text.Replace("&nbsp;", "");
+                txtLNCR_DateCreated.Text= _row.Cells[5].Text.Replace("&nbsp;", "");
+                txtLNCR_ChargeSlipDate.Text = _row.Cells[6].Text.Replace("&nbsp;", "");
+                txtLNCR_TransactionDate.Text = _row.Cells[7].Text.Replace("&nbsp;", "");
+                ddlLNCR_Trucker.SelectedValue = _row.Cells[2].Text.Replace("&nbsp;", "");
+                txtLNCR_DriverName.Text = _row.Cells[3].Text.Replace("&nbsp;", "");
+                txtLNCR_HelperName.Text = _row.Cells[4].Text.Replace("&nbsp;", "");
+                chkLNCR_Cat_Shortages.Checked = _gc.Load_CheckBox(_row.Cells[9].Text.Replace("&nbsp;", ""));
+                chkLNCR_Cat_LateDelivery.Checked = _gc.Load_CheckBox(_row.Cells[13].Text.Replace("&nbsp;", ""));
+                chkLNCR_Cat_LateLiquidation.Checked = _gc.Load_CheckBox(_row.Cells[10].Text.Replace("&nbsp;", ""));
+                chkLNCR_Cat_NonDelivery = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Cat_LateArrival = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Cat_QualityRelated = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Cat_NoShow = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Cat_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
+                txtLNCR_Cat_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Pen_WrittenWarning = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Pen_Charge = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Pen_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
+                txtLNCR_Pen_Others = _row.Cells[0].Text.Replace("&nbsp;", "");
 
+            }
         }
 
         protected void gvLNCRList_PageIndexChanging(object sender, GridViewPageEventArgs e)
