@@ -12,7 +12,7 @@
   <xs:element name="DataReporter" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataReporter" msprop:Generator_UserDSName="DataReporter">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ChargeSlip" msprop:Generator_TableClassName="ChargeSlipDataTable" msprop:Generator_TableVarName="tableChargeSlip" msprop:Generator_RowChangedName="ChargeSlipRowChanged" msprop:Generator_TablePropName="ChargeSlip" msprop:Generator_RowDeletingName="ChargeSlipRowDeleting" msprop:Generator_RowChangingName="ChargeSlipRowChanging" msprop:Generator_RowEvHandlerName="ChargeSlipRowChangeEventHandler" msprop:Generator_RowDeletedName="ChargeSlipRowDeleted" msprop:Generator_RowClassName="ChargeSlipRow" msprop:Generator_UserTableName="ChargeSlip" msprop:Generator_RowEvArgName="ChargeSlipRowChangeEvent">
+        <xs:element name="ChargeSlip" msprop:Generator_TableClassName="ChargeSlipDataTable" msprop:Generator_TableVarName="tableChargeSlip" msprop:Generator_TablePropName="ChargeSlip" msprop:Generator_RowDeletingName="ChargeSlipRowDeleting" msprop:Generator_RowChangingName="ChargeSlipRowChanging" msprop:Generator_RowEvHandlerName="ChargeSlipRowChangeEventHandler" msprop:Generator_RowDeletedName="ChargeSlipRowDeleted" msprop:Generator_UserTableName="ChargeSlip" msprop:Generator_RowChangedName="ChargeSlipRowChanged" msprop:Generator_RowEvArgName="ChargeSlipRowChangeEvent" msprop:Generator_RowClassName="ChargeSlipRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CSNo" msprop:Generator_ColumnVarNameInTable="columnCSNo" msprop:Generator_ColumnPropNameInRow="CSNo" msprop:Generator_ColumnPropNameInTable="CSNoColumn" msprop:Generator_UserColumnName="CSNo" type="xs:int" minOccurs="0" />
@@ -29,7 +29,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NTE_Head" msprop:Generator_TableClassName="NTE_HeadDataTable" msprop:Generator_TableVarName="tableNTE_Head" msprop:Generator_TablePropName="NTE_Head" msprop:Generator_RowDeletingName="NTE_HeadRowDeleting" msprop:Generator_RowChangingName="NTE_HeadRowChanging" msprop:Generator_RowEvHandlerName="NTE_HeadRowChangeEventHandler" msprop:Generator_RowDeletedName="NTE_HeadRowDeleted" msprop:Generator_UserTableName="NTE_Head" msprop:Generator_RowChangedName="NTE_HeadRowChanged" msprop:Generator_RowEvArgName="NTE_HeadRowChangeEvent" msprop:Generator_RowClassName="NTE_HeadRow">
+        <xs:element name="NTE_Head" msprop:Generator_TableClassName="NTE_HeadDataTable" msprop:Generator_TableVarName="tableNTE_Head" msprop:Generator_RowChangedName="NTE_HeadRowChanged" msprop:Generator_TablePropName="NTE_Head" msprop:Generator_RowDeletingName="NTE_HeadRowDeleting" msprop:Generator_RowChangingName="NTE_HeadRowChanging" msprop:Generator_RowEvHandlerName="NTE_HeadRowChangeEventHandler" msprop:Generator_RowDeletedName="NTE_HeadRowDeleted" msprop:Generator_RowClassName="NTE_HeadRow" msprop:Generator_UserTableName="NTE_Head" msprop:Generator_RowEvArgName="NTE_HeadRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NTEID" msprop:Generator_ColumnVarNameInTable="columnNTEID" msprop:Generator_ColumnPropNameInRow="NTEID" msprop:Generator_ColumnPropNameInTable="NTEIDColumn" msprop:Generator_UserColumnName="NTEID" type="xs:int" minOccurs="0" />
@@ -45,7 +45,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NTE_Body" msprop:Generator_TableClassName="NTE_BodyDataTable" msprop:Generator_TableVarName="tableNTE_Body" msprop:Generator_TablePropName="NTE_Body" msprop:Generator_RowDeletingName="NTE_BodyRowDeleting" msprop:Generator_RowChangingName="NTE_BodyRowChanging" msprop:Generator_RowEvHandlerName="NTE_BodyRowChangeEventHandler" msprop:Generator_RowDeletedName="NTE_BodyRowDeleted" msprop:Generator_UserTableName="NTE_Body" msprop:Generator_RowChangedName="NTE_BodyRowChanged" msprop:Generator_RowEvArgName="NTE_BodyRowChangeEvent" msprop:Generator_RowClassName="NTE_BodyRow">
+        <xs:element name="NTE_Body" msprop:Generator_TableClassName="NTE_BodyDataTable" msprop:Generator_TableVarName="tableNTE_Body" msprop:Generator_RowChangedName="NTE_BodyRowChanged" msprop:Generator_TablePropName="NTE_Body" msprop:Generator_RowDeletingName="NTE_BodyRowDeleting" msprop:Generator_RowChangingName="NTE_BodyRowChanging" msprop:Generator_RowEvHandlerName="NTE_BodyRowChangeEventHandler" msprop:Generator_RowDeletedName="NTE_BodyRowDeleted" msprop:Generator_RowClassName="NTE_BodyRow" msprop:Generator_UserTableName="NTE_Body" msprop:Generator_RowEvArgName="NTE_BodyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="OffenseID" msprop:Generator_ColumnVarNameInTable="columnOffenseID" msprop:Generator_ColumnPropNameInRow="OffenseID" msprop:Generator_ColumnPropNameInTable="OffenseIDColumn" msprop:Generator_UserColumnName="OffenseID" type="xs:int" minOccurs="0" />
@@ -55,7 +55,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NTE_COD" msprop:Generator_TableClassName="NTE_CODDataTable" msprop:Generator_TableVarName="tableNTE_COD" msprop:Generator_TablePropName="NTE_COD" msprop:Generator_RowDeletingName="NTE_CODRowDeleting" msprop:Generator_RowChangingName="NTE_CODRowChanging" msprop:Generator_RowEvHandlerName="NTE_CODRowChangeEventHandler" msprop:Generator_RowDeletedName="NTE_CODRowDeleted" msprop:Generator_UserTableName="NTE_COD" msprop:Generator_RowChangedName="NTE_CODRowChanged" msprop:Generator_RowEvArgName="NTE_CODRowChangeEvent" msprop:Generator_RowClassName="NTE_CODRow">
+        <xs:element name="NTE_COD" msprop:Generator_TableClassName="NTE_CODDataTable" msprop:Generator_TableVarName="tableNTE_COD" msprop:Generator_RowChangedName="NTE_CODRowChanged" msprop:Generator_TablePropName="NTE_COD" msprop:Generator_RowDeletingName="NTE_CODRowDeleting" msprop:Generator_RowChangingName="NTE_CODRowChanging" msprop:Generator_RowEvHandlerName="NTE_CODRowChangeEventHandler" msprop:Generator_RowDeletedName="NTE_CODRowDeleted" msprop:Generator_RowClassName="NTE_CODRow" msprop:Generator_UserTableName="NTE_COD" msprop:Generator_RowEvArgName="NTE_CODRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CODID" msprop:Generator_ColumnVarNameInTable="columnCODID" msprop:Generator_ColumnPropNameInRow="CODID" msprop:Generator_ColumnPropNameInTable="CODIDColumn" msprop:Generator_UserColumnName="CODID" type="xs:int" minOccurs="0" />
@@ -65,6 +65,10 @@
               <xs:element name="Provision" msprop:Generator_ColumnVarNameInTable="columnProvision" msprop:Generator_ColumnPropNameInRow="Provision" msprop:Generator_ColumnPropNameInTable="ProvisionColumn" msprop:Generator_UserColumnName="Provision" type="xs:string" minOccurs="0" />
               <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LNCR_Head" msprop:Generator_TableClassName="LNCR_HeadDataTable" msprop:Generator_TableVarName="tableLNCR_Head" msprop:Generator_TablePropName="LNCR_Head" msprop:Generator_RowDeletingName="LNCR_HeadRowDeleting" msprop:Generator_RowChangingName="LNCR_HeadRowChanging" msprop:Generator_RowEvHandlerName="LNCR_HeadRowChangeEventHandler" msprop:Generator_RowDeletedName="LNCR_HeadRowDeleted" msprop:Generator_UserTableName="LNCR_Head" msprop:Generator_RowChangedName="LNCR_HeadRowChanged" msprop:Generator_RowEvArgName="LNCR_HeadRowChangeEvent" msprop:Generator_RowClassName="LNCR_HeadRow">
+          <xs:complexType>
           </xs:complexType>
         </xs:element>
       </xs:choice>

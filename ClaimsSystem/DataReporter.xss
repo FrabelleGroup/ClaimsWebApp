@@ -9,7 +9,8 @@
     <Shape ID="DesignTable:ChargeSlip" ZOrder="4" X="19" Y="16" Height="286" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="282" />
     <Shape ID="DesignTable:NTE_Head" ZOrder="3" X="220" Y="42" Height="263" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="259" />
     <Shape ID="DesignTable:NTE_Body" ZOrder="2" X="463" Y="44" Height="125" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:NTE_COD" ZOrder="1" X="681" Y="46" Height="171" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="167" />
+    <Shape ID="DesignTable:NTE_COD" ZOrder="5" X="681" Y="46" Height="171" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="167" />
+    <Shape ID="DesignTable:LNCR_Head" ZOrder="1" X="873" Y="50" Height="56" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="52" />
   </Shapes>
   <Connectors />
 </DiagramLayout>
