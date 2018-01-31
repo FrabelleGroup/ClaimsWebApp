@@ -175,6 +175,7 @@
     <Content Include="LNCR.aspx" />
     <Content Include="NTE.aspx" />
     <Content Include="QARR.aspx" />
+    <Content Include="Reports.aspx" />
     <Content Include="TNCR.aspx" />
     <Content Include="UserProfile.aspx" />
     <Content Include="Web.config" />
@@ -220,6 +221,13 @@
     </Compile>
     <Compile Include="QARR.aspx.designer.cs">
       <DependentUpon>QARR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
     <Compile Include="reports\ChargeSlip.cs">
       <AutoGen>True</AutoGen>
