@@ -177,7 +177,7 @@ namespace ClaimsSystem
         {
             if (e.CommandName == "Select")
             {
-                int _index = Convert.ToInt32(e.CommandName);
+                int _index = Convert.ToInt32(e.CommandArgument);
                 GridViewRow _row = gvLNCRList.Rows[_index];
                 hfLNCRID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
                 txtLNCR_ID.Text= _row.Cells[0].Text.Replace("&nbsp;", "");
