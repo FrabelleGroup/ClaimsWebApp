@@ -19,7 +19,11 @@
     <br />
     <div class="row">
         <div class="col-md-12">
-            <CR:CrystalReportViewer ID="crv1" runat="server" AutoDataBind="true" />
+            <CR:CrystalReportViewer ID="crv1" runat="server" AutoDataBind="true" EnableParameterPrompt="True"
+                ReuseParameterValuesOnRefresh="True" HasCrystalLogo="False" HasToggleGroupTreeButton="False"
+                Height="50px" ToolPanelView="None" Width="100%" HasExportButton="True" HasPrintButton="True"
+                HasToggleParameterPanelButton="False" HasZoomFactorList="False" HasSearchButton="False"
+                HasDrillUpButton="False" HasDrilldownTabs="False"  />
         </div>
     </div>
 </asp:Content>
