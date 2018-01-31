@@ -19,7 +19,7 @@
     <br />
     <div class="row">
         <div class="col-md-12">
-            <CR:CrystalReportViewer ID="crv1" runat="server" AutoDataBind="true" />
+            <CR:CrystalReportViewer ID="crv1" runat="server" AutoDataBind="true" HasRefreshButton="False"  />
         </div>
     </div>
 </asp:Content>
