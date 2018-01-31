@@ -1785,6 +1785,56 @@ namespace ClaimsSystem {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class LNCR_HeadDataTable : global::System.Data.TypedTableBase<LNCR_HeadRow> {
             
+            private global::System.Data.DataColumn columnLNCRHeadID;
+            
+            private global::System.Data.DataColumn columnCompanyID;
+            
+            private global::System.Data.DataColumn columnSupplierID;
+            
+            private global::System.Data.DataColumn columnDriverName;
+            
+            private global::System.Data.DataColumn columnHelper;
+            
+            private global::System.Data.DataColumn columnChargeSlipDate;
+            
+            private global::System.Data.DataColumn columnTransactionDate;
+            
+            private global::System.Data.DataColumn columnDateCreated;
+            
+            private global::System.Data.DataColumn columnCategory_Shortages;
+            
+            private global::System.Data.DataColumn columnCategory_LateLiquidation;
+            
+            private global::System.Data.DataColumn columnCategory_LateArrival;
+            
+            private global::System.Data.DataColumn columnCategory_NoShow;
+            
+            private global::System.Data.DataColumn columnCategory_LateDelivery;
+            
+            private global::System.Data.DataColumn columnCategory_NonDelivery;
+            
+            private global::System.Data.DataColumn columnCategory_QualityRelated;
+            
+            private global::System.Data.DataColumn columnCategory_Others;
+            
+            private global::System.Data.DataColumn columnCategory_OthersRemarks;
+            
+            private global::System.Data.DataColumn columnPenalty_WrittenWarning;
+            
+            private global::System.Data.DataColumn columnPenalty_Charge;
+            
+            private global::System.Data.DataColumn columnPenalty_Others;
+            
+            private global::System.Data.DataColumn columnPenalty_OthersRemarks;
+            
+            private global::System.Data.DataColumn columnPreparedBy;
+            
+            private global::System.Data.DataColumn columnAcknowledgeBy;
+            
+            private global::System.Data.DataColumn columnApprovedBy;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public LNCR_HeadDataTable() {
@@ -1816,6 +1866,206 @@ namespace ClaimsSystem {
             protected LNCR_HeadDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LNCRHeadIDColumn {
+                get {
+                    return this.columnLNCRHeadID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CompanyIDColumn {
+                get {
+                    return this.columnCompanyID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SupplierIDColumn {
+                get {
+                    return this.columnSupplierID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DriverNameColumn {
+                get {
+                    return this.columnDriverName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HelperColumn {
+                get {
+                    return this.columnHelper;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ChargeSlipDateColumn {
+                get {
+                    return this.columnChargeSlipDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TransactionDateColumn {
+                get {
+                    return this.columnTransactionDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DateCreatedColumn {
+                get {
+                    return this.columnDateCreated;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_ShortagesColumn {
+                get {
+                    return this.columnCategory_Shortages;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_LateLiquidationColumn {
+                get {
+                    return this.columnCategory_LateLiquidation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_LateArrivalColumn {
+                get {
+                    return this.columnCategory_LateArrival;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_NoShowColumn {
+                get {
+                    return this.columnCategory_NoShow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_LateDeliveryColumn {
+                get {
+                    return this.columnCategory_LateDelivery;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_NonDeliveryColumn {
+                get {
+                    return this.columnCategory_NonDelivery;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_QualityRelatedColumn {
+                get {
+                    return this.columnCategory_QualityRelated;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_OthersColumn {
+                get {
+                    return this.columnCategory_Others;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Category_OthersRemarksColumn {
+                get {
+                    return this.columnCategory_OthersRemarks;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Penalty_WrittenWarningColumn {
+                get {
+                    return this.columnPenalty_WrittenWarning;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Penalty_ChargeColumn {
+                get {
+                    return this.columnPenalty_Charge;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Penalty_OthersColumn {
+                get {
+                    return this.columnPenalty_Others;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Penalty_OthersRemarksColumn {
+                get {
+                    return this.columnPenalty_OthersRemarks;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PreparedByColumn {
+                get {
+                    return this.columnPreparedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AcknowledgeByColumn {
+                get {
+                    return this.columnAcknowledgeBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ApprovedByColumn {
+                get {
+                    return this.columnApprovedBy;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1855,9 +2105,59 @@ namespace ClaimsSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public LNCR_HeadRow AddLNCR_HeadRow() {
+            public LNCR_HeadRow AddLNCR_HeadRow(
+                        string LNCRHeadID, 
+                        string CompanyID, 
+                        string SupplierID, 
+                        string DriverName, 
+                        string Helper, 
+                        string ChargeSlipDate, 
+                        string TransactionDate, 
+                        string DateCreated, 
+                        string Category_Shortages, 
+                        string Category_LateLiquidation, 
+                        string Category_LateArrival, 
+                        string Category_NoShow, 
+                        string Category_LateDelivery, 
+                        string Category_NonDelivery, 
+                        string Category_QualityRelated, 
+                        string Category_Others, 
+                        string Category_OthersRemarks, 
+                        string Penalty_WrittenWarning, 
+                        string Penalty_Charge, 
+                        string Penalty_Others, 
+                        string Penalty_OthersRemarks, 
+                        string PreparedBy, 
+                        string AcknowledgeBy, 
+                        string ApprovedBy, 
+                        string Status) {
                 LNCR_HeadRow rowLNCR_HeadRow = ((LNCR_HeadRow)(this.NewRow()));
-                object[] columnValuesArray = new object[0];
+                object[] columnValuesArray = new object[] {
+                        LNCRHeadID,
+                        CompanyID,
+                        SupplierID,
+                        DriverName,
+                        Helper,
+                        ChargeSlipDate,
+                        TransactionDate,
+                        DateCreated,
+                        Category_Shortages,
+                        Category_LateLiquidation,
+                        Category_LateArrival,
+                        Category_NoShow,
+                        Category_LateDelivery,
+                        Category_NonDelivery,
+                        Category_QualityRelated,
+                        Category_Others,
+                        Category_OthersRemarks,
+                        Penalty_WrittenWarning,
+                        Penalty_Charge,
+                        Penalty_Others,
+                        Penalty_OthersRemarks,
+                        PreparedBy,
+                        AcknowledgeBy,
+                        ApprovedBy,
+                        Status};
                 rowLNCR_HeadRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLNCR_HeadRow);
                 return rowLNCR_HeadRow;
@@ -1880,11 +2180,86 @@ namespace ClaimsSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnLNCRHeadID = base.Columns["LNCRHeadID"];
+                this.columnCompanyID = base.Columns["CompanyID"];
+                this.columnSupplierID = base.Columns["SupplierID"];
+                this.columnDriverName = base.Columns["DriverName"];
+                this.columnHelper = base.Columns["Helper"];
+                this.columnChargeSlipDate = base.Columns["ChargeSlipDate"];
+                this.columnTransactionDate = base.Columns["TransactionDate"];
+                this.columnDateCreated = base.Columns["DateCreated"];
+                this.columnCategory_Shortages = base.Columns["Category_Shortages"];
+                this.columnCategory_LateLiquidation = base.Columns["Category_LateLiquidation"];
+                this.columnCategory_LateArrival = base.Columns["Category_LateArrival"];
+                this.columnCategory_NoShow = base.Columns["Category_NoShow"];
+                this.columnCategory_LateDelivery = base.Columns["Category_LateDelivery"];
+                this.columnCategory_NonDelivery = base.Columns["Category_NonDelivery"];
+                this.columnCategory_QualityRelated = base.Columns["Category_QualityRelated"];
+                this.columnCategory_Others = base.Columns["Category_Others"];
+                this.columnCategory_OthersRemarks = base.Columns["Category_OthersRemarks"];
+                this.columnPenalty_WrittenWarning = base.Columns["Penalty_WrittenWarning"];
+                this.columnPenalty_Charge = base.Columns["Penalty_Charge"];
+                this.columnPenalty_Others = base.Columns["Penalty_Others"];
+                this.columnPenalty_OthersRemarks = base.Columns["Penalty_OthersRemarks"];
+                this.columnPreparedBy = base.Columns["PreparedBy"];
+                this.columnAcknowledgeBy = base.Columns["AcknowledgeBy"];
+                this.columnApprovedBy = base.Columns["ApprovedBy"];
+                this.columnStatus = base.Columns["Status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnLNCRHeadID = new global::System.Data.DataColumn("LNCRHeadID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLNCRHeadID);
+                this.columnCompanyID = new global::System.Data.DataColumn("CompanyID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompanyID);
+                this.columnSupplierID = new global::System.Data.DataColumn("SupplierID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplierID);
+                this.columnDriverName = new global::System.Data.DataColumn("DriverName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDriverName);
+                this.columnHelper = new global::System.Data.DataColumn("Helper", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHelper);
+                this.columnChargeSlipDate = new global::System.Data.DataColumn("ChargeSlipDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChargeSlipDate);
+                this.columnTransactionDate = new global::System.Data.DataColumn("TransactionDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionDate);
+                this.columnDateCreated = new global::System.Data.DataColumn("DateCreated", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateCreated);
+                this.columnCategory_Shortages = new global::System.Data.DataColumn("Category_Shortages", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_Shortages);
+                this.columnCategory_LateLiquidation = new global::System.Data.DataColumn("Category_LateLiquidation", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_LateLiquidation);
+                this.columnCategory_LateArrival = new global::System.Data.DataColumn("Category_LateArrival", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_LateArrival);
+                this.columnCategory_NoShow = new global::System.Data.DataColumn("Category_NoShow", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_NoShow);
+                this.columnCategory_LateDelivery = new global::System.Data.DataColumn("Category_LateDelivery", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_LateDelivery);
+                this.columnCategory_NonDelivery = new global::System.Data.DataColumn("Category_NonDelivery", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_NonDelivery);
+                this.columnCategory_QualityRelated = new global::System.Data.DataColumn("Category_QualityRelated", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_QualityRelated);
+                this.columnCategory_Others = new global::System.Data.DataColumn("Category_Others", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_Others);
+                this.columnCategory_OthersRemarks = new global::System.Data.DataColumn("Category_OthersRemarks", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategory_OthersRemarks);
+                this.columnPenalty_WrittenWarning = new global::System.Data.DataColumn("Penalty_WrittenWarning", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPenalty_WrittenWarning);
+                this.columnPenalty_Charge = new global::System.Data.DataColumn("Penalty_Charge", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPenalty_Charge);
+                this.columnPenalty_Others = new global::System.Data.DataColumn("Penalty_Others", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPenalty_Others);
+                this.columnPenalty_OthersRemarks = new global::System.Data.DataColumn("Penalty_OthersRemarks", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPenalty_OthersRemarks);
+                this.columnPreparedBy = new global::System.Data.DataColumn("PreparedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPreparedBy);
+                this.columnAcknowledgeBy = new global::System.Data.DataColumn("AcknowledgeBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAcknowledgeBy);
+                this.columnApprovedBy = new global::System.Data.DataColumn("ApprovedBy", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApprovedBy);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2951,6 +3326,706 @@ namespace ClaimsSystem {
             internal LNCR_HeadRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableLNCR_Head = ((LNCR_HeadDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LNCRHeadID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.LNCRHeadIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LNCRHeadID\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.LNCRHeadIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CompanyID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.CompanyIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyID\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.CompanyIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SupplierID {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.SupplierIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SupplierID\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.SupplierIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DriverName {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.DriverNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DriverName\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.DriverNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Helper {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.HelperColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Helper\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.HelperColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ChargeSlipDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.ChargeSlipDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ChargeSlipDate\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.ChargeSlipDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TransactionDate {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.TransactionDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TransactionDate\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.TransactionDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DateCreated {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.DateCreatedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DateCreated\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.DateCreatedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_Shortages {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_ShortagesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_Shortages\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_ShortagesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_LateLiquidation {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_LateLiquidationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_LateLiquidation\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_LateLiquidationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_LateArrival {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_LateArrivalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_LateArrival\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_LateArrivalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_NoShow {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_NoShowColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_NoShow\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_NoShowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_LateDelivery {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_LateDeliveryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_LateDelivery\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_LateDeliveryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_NonDelivery {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_NonDeliveryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_NonDelivery\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_NonDeliveryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_QualityRelated {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_QualityRelatedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_QualityRelated\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_QualityRelatedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_Others {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_OthersColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_Others\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_OthersColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Category_OthersRemarks {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Category_OthersRemarksColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Category_OthersRemarks\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Category_OthersRemarksColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Penalty_WrittenWarning {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Penalty_WrittenWarningColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Penalty_WrittenWarning\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Penalty_WrittenWarningColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Penalty_Charge {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Penalty_ChargeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Penalty_Charge\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Penalty_ChargeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Penalty_Others {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Penalty_OthersColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Penalty_Others\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Penalty_OthersColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Penalty_OthersRemarks {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.Penalty_OthersRemarksColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Penalty_OthersRemarks\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.Penalty_OthersRemarksColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PreparedBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.PreparedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PreparedBy\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.PreparedByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string AcknowledgeBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.AcknowledgeByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AcknowledgeBy\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.AcknowledgeByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ApprovedBy {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.ApprovedByColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApprovedBy\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.ApprovedByColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tableLNCR_Head.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'LNCR_Head\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLNCR_Head.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLNCRHeadIDNull() {
+                return this.IsNull(this.tableLNCR_Head.LNCRHeadIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLNCRHeadIDNull() {
+                this[this.tableLNCR_Head.LNCRHeadIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCompanyIDNull() {
+                return this.IsNull(this.tableLNCR_Head.CompanyIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCompanyIDNull() {
+                this[this.tableLNCR_Head.CompanyIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSupplierIDNull() {
+                return this.IsNull(this.tableLNCR_Head.SupplierIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSupplierIDNull() {
+                this[this.tableLNCR_Head.SupplierIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDriverNameNull() {
+                return this.IsNull(this.tableLNCR_Head.DriverNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDriverNameNull() {
+                this[this.tableLNCR_Head.DriverNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHelperNull() {
+                return this.IsNull(this.tableLNCR_Head.HelperColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHelperNull() {
+                this[this.tableLNCR_Head.HelperColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsChargeSlipDateNull() {
+                return this.IsNull(this.tableLNCR_Head.ChargeSlipDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetChargeSlipDateNull() {
+                this[this.tableLNCR_Head.ChargeSlipDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTransactionDateNull() {
+                return this.IsNull(this.tableLNCR_Head.TransactionDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTransactionDateNull() {
+                this[this.tableLNCR_Head.TransactionDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateCreatedNull() {
+                return this.IsNull(this.tableLNCR_Head.DateCreatedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateCreatedNull() {
+                this[this.tableLNCR_Head.DateCreatedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_ShortagesNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_ShortagesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_ShortagesNull() {
+                this[this.tableLNCR_Head.Category_ShortagesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_LateLiquidationNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_LateLiquidationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_LateLiquidationNull() {
+                this[this.tableLNCR_Head.Category_LateLiquidationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_LateArrivalNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_LateArrivalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_LateArrivalNull() {
+                this[this.tableLNCR_Head.Category_LateArrivalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_NoShowNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_NoShowColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_NoShowNull() {
+                this[this.tableLNCR_Head.Category_NoShowColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_LateDeliveryNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_LateDeliveryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_LateDeliveryNull() {
+                this[this.tableLNCR_Head.Category_LateDeliveryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_NonDeliveryNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_NonDeliveryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_NonDeliveryNull() {
+                this[this.tableLNCR_Head.Category_NonDeliveryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_QualityRelatedNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_QualityRelatedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_QualityRelatedNull() {
+                this[this.tableLNCR_Head.Category_QualityRelatedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_OthersNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_OthersColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_OthersNull() {
+                this[this.tableLNCR_Head.Category_OthersColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCategory_OthersRemarksNull() {
+                return this.IsNull(this.tableLNCR_Head.Category_OthersRemarksColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCategory_OthersRemarksNull() {
+                this[this.tableLNCR_Head.Category_OthersRemarksColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPenalty_WrittenWarningNull() {
+                return this.IsNull(this.tableLNCR_Head.Penalty_WrittenWarningColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPenalty_WrittenWarningNull() {
+                this[this.tableLNCR_Head.Penalty_WrittenWarningColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPenalty_ChargeNull() {
+                return this.IsNull(this.tableLNCR_Head.Penalty_ChargeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPenalty_ChargeNull() {
+                this[this.tableLNCR_Head.Penalty_ChargeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPenalty_OthersNull() {
+                return this.IsNull(this.tableLNCR_Head.Penalty_OthersColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPenalty_OthersNull() {
+                this[this.tableLNCR_Head.Penalty_OthersColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPenalty_OthersRemarksNull() {
+                return this.IsNull(this.tableLNCR_Head.Penalty_OthersRemarksColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPenalty_OthersRemarksNull() {
+                this[this.tableLNCR_Head.Penalty_OthersRemarksColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPreparedByNull() {
+                return this.IsNull(this.tableLNCR_Head.PreparedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPreparedByNull() {
+                this[this.tableLNCR_Head.PreparedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAcknowledgeByNull() {
+                return this.IsNull(this.tableLNCR_Head.AcknowledgeByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAcknowledgeByNull() {
+                this[this.tableLNCR_Head.AcknowledgeByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsApprovedByNull() {
+                return this.IsNull(this.tableLNCR_Head.ApprovedByColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetApprovedByNull() {
+                this[this.tableLNCR_Head.ApprovedByColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tableLNCR_Head.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tableLNCR_Head.StatusColumn] = global::System.Convert.DBNull;
             }
         }
         
