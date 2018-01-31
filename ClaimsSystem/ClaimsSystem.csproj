@@ -236,6 +236,12 @@
       <DependentUpon>ChargeSlip.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="reports\NTE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NTE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TNCR.aspx.cs">
       <DependentUpon>TNCR.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,6 +333,10 @@
     <EmbeddedResource Include="reports\ChargeSlip.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ChargeSlip.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\NTE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NTE.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
