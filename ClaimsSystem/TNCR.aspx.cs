@@ -22,6 +22,8 @@ namespace ClaimsSystem
                 if (!Page.IsPostBack)
                 {
                     MainButton(true, false);
+                    gvTNCRList.DataSource = Retrieve_Header();
+                    gvTNCRList.DataBind();
                     mvTNCR.SetActiveView(vwViewTNCR);
                 }
                 else { }
@@ -69,9 +71,9 @@ namespace ClaimsSystem
                     , chkTNCR_Conc_RawMaterials.Checked, /*"finishgoods"*/false, chkTNCR_Conc_TechnicalScrap.Checked, chkTNCR_Conc_YieldVariances.Checked, chkTNCR_Conc_ConsumptionVariances.Checked,
                     chkTNCR_Conc_DelayReport.Checked, /*"QADeviation"*/false, chkTNCR_Conc_WrongLabel.Checked, chkTNCR_Conc_ShortLacking.Checked, /*"QANonConformance"*/false, chkTNCR_Conc_WeakSeal.Checked,
                     chkTNCR_Conc_Bursting.Checked, chkTNCR_Conc_LoosePack.Checked, chkTNCR_Conc_Rejects.Checked, chkTNCR_Conc_Contamination.Checked, chkTNCR_Conc_SwabGMPSanitation.Checked,
-                    chkTNCR_Conc_Others.Checked, txtTNCR_Conc_Others.Text,0,0,0,true);
+                    chkTNCR_Conc_Others.Checked, txtTNCR_Conc_Others.Text, 0, 0, 0, true, txtTNCR_Remarks.Text, ddlTNCR_Toller.SelectedValue);
                 // save header
-
+// int TallID, int CompanyID, DateTime Date, string TotalAffected, decimal TotalAffectedAmount, bool InventoryVariance, bool RawMaterials, bool FinishedGoods, bool TechnicalScrap, bool YieldVariances, bool ConsumptionVariance, bool DelayReport, bool QADeviation, bool WrongLabel, bool ShortLacking, bool QANonConformance, bool WeakSeal, bool Bursting, bool LoosePack, bool Rejects, bool Contamination, bool SwabGMPSanitation, bool Others, string OthersRemarks, int PreparedByID, int ReceivedByID, int AcknowledgeByID, bool Status, string Remarks, string Toller
            /*     _wcf.Set_Tall_Report(Convert.ToInt32(hfTNCRID.Value), 0, DateTime.Now, txtTNCR_TotalAffected.Text, Convert.ToDecimal(txtTNCR_AmountAffected), chkTNCR_Conc_ConsumptionVariance.Checked
     , chkTNCR_Conc_RawMaterials.Checked, "finishgoods", chkTNCR_Conc_TechnicalScrap.Checked, chkTNCR_Conc_YieldVariances.Checked, chkTNCR_Conc_ConsumptionVariances.Checked,
     chkTNCR_Conc_DelayReport.Checked, "QADeviation", chkTNCR_Conc_WrongLabel.Checked, chkTNCR_Conc_ShortLacking.Checked, "QANonConformance", chkTNCR_Conc_WeakSeal.Checked,
@@ -109,7 +111,7 @@ namespace ClaimsSystem
             NotificationModal(false, "", "", false, false);
         }
 
-        #region Function
+        #region Functions
 
         public DataTable Retrieve_Header()
         {
@@ -152,7 +154,38 @@ namespace ClaimsSystem
 
         protected void gvTNCRList_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            if (e.CommandName == "Select")
+            {
+                int _index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow _row = gvTNCRList.Rows[_index];
+                hfTNCRID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
+                txtTNCR_ID.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
+                txtTNCR_DateCreated.Text = _row.Cells[2].Text.Replace("&nbsp;", "");
+                ddlTNCR_Toller.SelectedValue = _row.Cells[29].Text.Replace("&nbsp;", "");
+                txtTNCR_TotalAffected.Text = _row.Cells[3].Text.Replace("&nbsp;", "");
+                txtTNCR_AmountAffected.Text = _row.Cells[4].Text.Replace("&nbsp;", "");
+                chkTNCR_Conc_RawMaterials.Checked = _gc.Load_CheckBox(_row.Cells[6].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_ConsumptionVariance.Checked = _gc.Load_CheckBox(_row.Cells[5].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_TechnicalScrap.Checked = _gc.Load_CheckBox(_row.Cells[8].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_YieldVariances.Checked = _gc.Load_CheckBox(_row.Cells[9].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_ConsumptionVariances.Checked = _gc.Load_CheckBox(_row.Cells[10].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_DelayReport.Checked = _gc.Load_CheckBox(_row.Cells[11].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_WeakSeal.Checked = _gc.Load_CheckBox(_row.Cells[16].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_Bursting.Checked = _gc.Load_CheckBox(_row.Cells[17].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_LoosePack.Checked = _gc.Load_CheckBox(_row.Cells[18].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_Rejects.Checked = _gc.Load_CheckBox(_row.Cells[19].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_Contamination.Checked = _gc.Load_CheckBox(_row.Cells[20].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_SwabGMPSanitation.Checked = _gc.Load_CheckBox(_row.Cells[21].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_Others.Checked = _gc.Load_CheckBox(_row.Cells[22].Text.Replace("&nbsp;", ""));
+                txtTNCR_Conc_Others.Text = _row.Cells[23].Text.Replace("&nbsp;", "");
+                chkTNCR_Conc_WrongLabel.Checked = _gc.Load_CheckBox(_row.Cells[13].Text.Replace("&nbsp;", ""));
+                chkTNCR_Conc_ShortLacking.Checked = _gc.Load_CheckBox(_row.Cells[14].Text.Replace("&nbsp;", ""));
+                txtTNCR_Remarks.Text = _row.Cells[28].Text.Replace("&nbsp;", "");
 
+
+
+                mvTNCR.SetActiveView(vwDetailsTNCR);
+            }
         }
 
         protected void gvTNCRList_PageIndexChanging(object sender, GridViewPageEventArgs e)

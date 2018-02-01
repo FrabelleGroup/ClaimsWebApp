@@ -376,7 +376,9 @@ namespace ClaimsSystem.ServiceReference1 {
                     int PreparedByID, 
                     int ReceivedByID, 
                     int AcknowledgeByID, 
-                    bool Status);
+                    bool Status, 
+                    string Remarks, 
+                    string Toller);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IClaims/Set_Tall_Report", ReplyAction="http://tempuri.org/IClaims/Set_Tall_ReportResponse")]
         System.Threading.Tasks.Task Set_Tall_ReportAsync(
@@ -407,7 +409,9 @@ namespace ClaimsSystem.ServiceReference1 {
                     int PreparedByID, 
                     int ReceivedByID, 
                     int AcknowledgeByID, 
-                    bool Status);
+                    bool Status, 
+                    string Remarks, 
+                    string Toller);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -849,8 +853,10 @@ namespace ClaimsSystem.ServiceReference1 {
                     int PreparedByID, 
                     int ReceivedByID, 
                     int AcknowledgeByID, 
-                    bool Status) {
-            base.Channel.Set_Tall_Report(TallID, CompanyID, Date, TotalAffected, TotalAffectedAmount, InventoryVariance, RawMaterials, FinishedGoods, TechnicalScrap, YieldVariances, ConsumptionVariance, DelayReport, QADeviation, WrongLabel, ShortLacking, QANonConformance, WeakSeal, Bursting, LoosePack, Rejects, Contamination, SwabGMPSanitation, Others, OthersRemarks, PreparedByID, ReceivedByID, AcknowledgeByID, Status);
+                    bool Status, 
+                    string Remarks, 
+                    string Toller) {
+            base.Channel.Set_Tall_Report(TallID, CompanyID, Date, TotalAffected, TotalAffectedAmount, InventoryVariance, RawMaterials, FinishedGoods, TechnicalScrap, YieldVariances, ConsumptionVariance, DelayReport, QADeviation, WrongLabel, ShortLacking, QANonConformance, WeakSeal, Bursting, LoosePack, Rejects, Contamination, SwabGMPSanitation, Others, OthersRemarks, PreparedByID, ReceivedByID, AcknowledgeByID, Status, Remarks, Toller);
         }
         
         public System.Threading.Tasks.Task Set_Tall_ReportAsync(
@@ -881,8 +887,10 @@ namespace ClaimsSystem.ServiceReference1 {
                     int PreparedByID, 
                     int ReceivedByID, 
                     int AcknowledgeByID, 
-                    bool Status) {
-            return base.Channel.Set_Tall_ReportAsync(TallID, CompanyID, Date, TotalAffected, TotalAffectedAmount, InventoryVariance, RawMaterials, FinishedGoods, TechnicalScrap, YieldVariances, ConsumptionVariance, DelayReport, QADeviation, WrongLabel, ShortLacking, QANonConformance, WeakSeal, Bursting, LoosePack, Rejects, Contamination, SwabGMPSanitation, Others, OthersRemarks, PreparedByID, ReceivedByID, AcknowledgeByID, Status);
+                    bool Status, 
+                    string Remarks, 
+                    string Toller) {
+            return base.Channel.Set_Tall_ReportAsync(TallID, CompanyID, Date, TotalAffected, TotalAffectedAmount, InventoryVariance, RawMaterials, FinishedGoods, TechnicalScrap, YieldVariances, ConsumptionVariance, DelayReport, QADeviation, WrongLabel, ShortLacking, QANonConformance, WeakSeal, Bursting, LoosePack, Rejects, Contamination, SwabGMPSanitation, Others, OthersRemarks, PreparedByID, ReceivedByID, AcknowledgeByID, Status, Remarks, Toller);
         }
     }
 }

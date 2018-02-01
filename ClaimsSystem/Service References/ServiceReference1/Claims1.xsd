@@ -509,6 +509,8 @@
         <xs:element minOccurs="0" name="ReceivedByID" type="xs:int" />
         <xs:element minOccurs="0" name="AcknowledgeByID" type="xs:int" />
         <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Toller" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
