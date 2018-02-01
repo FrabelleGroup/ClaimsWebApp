@@ -249,10 +249,12 @@ namespace ClaimsSystem
                 GridViewRow _row = gvNTEList.Rows[_index];
                 hfNTEID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
                 txtNTE_ID.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
-                txtNTE_DateCreated.Text = _row.Cells[2].Text.Replace("&nbsp;", "");
+                DateTime dc = DateTime.Parse(_row.Cells[2].Text);
+                txtNTE_DateCreated.Text = dc.ToString("yyyy-MM-dd");
                 txtNTE_Subject.Text = _row.Cells[4].Text.Replace("&nbsp;", "");
                 txtNTE_EmployeeName.Text = _row.Cells[3].Text.Replace("&nbsp;", "");
-                txtNTE_IncidentDate.Text = _row.Cells[5].Text.Replace("&nbsp;", "");
+                DateTime ida = DateTime.Parse(_row.Cells[5].Text);
+                txtNTE_IncidentDate.Text = ida.ToString("yyyy-MM-dd");
                 txtNTE_IncidentPlace.Text = _row.Cells[6].Text.Replace("&nbsp;", "");
                 NTE_DaysOfSuspension.Text = _row.Cells[7].Text.Replace("&nbsp;", "");
                 txtNTE_Remarks.Text = _row.Cells[8].Text.Replace("&nbsp;", "");

@@ -209,9 +209,12 @@ namespace ClaimsSystem
                 GridViewRow _row = gvLNCRList.Rows[_index];
                 hfLNCRID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
                 txtLNCR_ID.Text= _row.Cells[0].Text.Replace("&nbsp;", "");
-                txtLNCR_DateCreated.Text= _row.Cells[5].Text.Replace("&nbsp;", "");
-                txtLNCR_ChargeSlipDate.Text = _row.Cells[6].Text.Replace("&nbsp;", "");
-                txtLNCR_TransactionDate.Text = _row.Cells[7].Text.Replace("&nbsp;", "");
+                DateTime dc = DateTime.Parse(_row.Cells[5].Text);
+                txtLNCR_DateCreated.Text = dc.ToString("yyyy-MM-dd");
+                DateTime cd = DateTime.Parse(_row.Cells[6].Text);
+                txtLNCR_ChargeSlipDate.Text = cd.ToString("yyyy-MM-dd");
+                DateTime td = DateTime.Parse(_row.Cells[7].Text);
+                txtLNCR_TransactionDate.Text = td.ToString("yyyy-MM-dd");
                 ddlLNCR_Trucker.SelectedValue = _row.Cells[2].Text.Replace("&nbsp;", "");
                 txtLNCR_DriverName.Text = _row.Cells[3].Text.Replace("&nbsp;", "");
                 txtLNCR_HelperName.Text = _row.Cells[4].Text.Replace("&nbsp;", "");

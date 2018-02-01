@@ -160,7 +160,8 @@ namespace ClaimsSystem
                 GridViewRow _row = gvTNCRList.Rows[_index];
                 hfTNCRID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
                 txtTNCR_ID.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
-                txtTNCR_DateCreated.Text = _row.Cells[2].Text.Replace("&nbsp;", "");
+                DateTime dc = DateTime.Parse(_row.Cells[2].Text);
+                txtTNCR_DateCreated.Text = dc.ToString("yyyy-MM-dd");
                 ddlTNCR_Toller.SelectedValue = _row.Cells[29].Text.Replace("&nbsp;", "");
                 txtTNCR_TotalAffected.Text = _row.Cells[3].Text.Replace("&nbsp;", "");
                 txtTNCR_AmountAffected.Text = _row.Cells[4].Text.Replace("&nbsp;", "");
