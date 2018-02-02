@@ -72,6 +72,7 @@ namespace ClaimsSystem
             {
                 dynamic _jData = JsonConvert.DeserializeObject<dynamic>(_jResponse);
                 txtLNCR_ID.Text = (string)_jData[0].LNCRHeadID;
+                txtLNCR_DateCreated.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
             //END ARGEE
 

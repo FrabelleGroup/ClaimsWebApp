@@ -73,6 +73,7 @@ namespace ClaimsSystem
             {
                 dynamic _jData = JsonConvert.DeserializeObject<dynamic>(_jResponse);
                 txtNTE_ID.Text = (string)_jData[0].NTEID;
+                txtNTE_DateCreated.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
 
 

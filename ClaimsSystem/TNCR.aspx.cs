@@ -39,6 +39,7 @@ namespace ClaimsSystem
             MainButton(false, true);
 
             Clear();
+            txtTNCR_DateCreated.Text = DateTime.Now.ToString("yyyy-MM-dd");
             mvTNCR.SetActiveView(vwDetailsTNCR);
         }
 

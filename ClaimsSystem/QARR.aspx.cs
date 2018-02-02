@@ -40,6 +40,7 @@ namespace ClaimsSystem
             {
                 dynamic _jData = JsonConvert.DeserializeObject<dynamic>(_jResponse);
                 txtQARR_ID.Text = (string)_jData[0].QARRID;
+                txtQARR_DateCreated.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
             //END ARGEE
             
