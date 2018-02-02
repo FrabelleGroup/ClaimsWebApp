@@ -176,6 +176,7 @@
     <Content Include="assets\vendor\raphael\raphael.min.js" />
     <Content Include="ChargeSlip.aspx" />
     <Content Include="LNCR.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="NTE.aspx" />
     <Content Include="QARR.aspx" />
     <Content Include="Reports.aspx" />
@@ -188,7 +189,9 @@
     </Content>
     <Content Include="TNCR.aspx" />
     <Content Include="UserProfile.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChargeSlip.aspx.cs">
@@ -216,6 +219,13 @@
     </Compile>
     <Compile Include="LNCR.aspx.designer.cs">
       <DependentUpon>LNCR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="NTE.aspx.cs">
       <DependentUpon>NTE.aspx</DependentUpon>

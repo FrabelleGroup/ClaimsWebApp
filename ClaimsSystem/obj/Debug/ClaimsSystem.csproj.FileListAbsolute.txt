@@ -12,3 +12,10 @@ C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\ClaimsSystem.dll
 C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\ClaimsSystem.pdb
 C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\Newtonsoft.Json.dll
 C:\Users\jonas\Documents\GitHub\ClaimsWebApp\ClaimsSystem\bin\Newtonsoft.Json.xml
+C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsWebApp\ClaimsSystem\bin\ClaimsSystem.dll
+C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsWebApp\ClaimsSystem\bin\ClaimsSystem.pdb
+C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsWebApp\ClaimsSystem\bin\Newtonsoft.Json.dll
+C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsWebApp\ClaimsSystem\bin\Newtonsoft.Json.xml
+C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsWebApp\ClaimsSystem\obj\Debug\ClaimsSystem.csprojResolveAssemblyReference.cache
+C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsWebApp\ClaimsSystem\obj\Debug\ClaimsSystem.dll
+C:\Users\Argee\Documents\ClaimsSystem\WebApp\ClaimsSystem\ClaimsWebApp\ClaimsSystem\obj\Debug\ClaimsSystem.pdb
