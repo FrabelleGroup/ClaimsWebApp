@@ -245,7 +245,7 @@ namespace ClaimsSystem
         {
             if (e.CommandName == "Select")
             {
-                int _index = Convert.ToInt32(e.CommandArgument);
+                int _index = Convert.ToInt32(e.CommandArgument) % gvNTEList.PageSize;
                 GridViewRow _row = gvNTEList.Rows[_index];
                 hfNTEID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
                 txtNTE_ID.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
@@ -269,12 +269,29 @@ namespace ClaimsSystem
 
         protected void gvNTEList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-
+            gvNTEList.PageIndex = e.NewPageIndex;
+            gvNTEList.DataSource = Retrieve_Header();
+            gvNTEList.DataBind();
         }
 
         protected void gvNTEList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        protected void gvNTEProvision_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvNTEProvision.PageIndex = e.NewPageIndex;
+            gvNTEProvision.DataSource = Retrieve_Body();
+            gvNTEProvision.DataBind();
+        }
+
+        protected void gvNTE_Provision_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvNTE_Provision.PageIndex = e.NewPageIndex;
+            gvNTE_Provision.DataSource = Retrieve_Body1();
+            gvNTE_Provision.DataBind();
         }
 
         #endregion

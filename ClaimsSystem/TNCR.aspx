@@ -43,7 +43,7 @@
                         <div class="panel-body">
                             <div style="width: 100%; overflow-x: scroll;">
                                 <asp:GridView runat="server" ID="gvTNCRList" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
-                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvTNCRList_RowCommand">
+                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvTNCRList_RowCommand" OnPageIndexChanging="gvTNCRList_PageIndexChanging">
                                     <Columns>
                                         <asp:BoundField DataField="TallID" HeaderText="TallID" />
                                         <asp:BoundField DataField="CompanyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />

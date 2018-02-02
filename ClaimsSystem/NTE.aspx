@@ -142,7 +142,7 @@
                         <div class="panel-body">
                             <div style="width: 100%; overflow-x: scroll;">
                                 <asp:GridView runat="server" ID="gvNTEProvision" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
-                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination">
+                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnPageIndexChanging="gvNTEProvision_PageIndexChanging">
                                     <Columns>
                                     <asp:BoundField DataField="OffenseID" HeaderText="OffenseID" />
                                     <asp:BoundField DataField="NTEID" HeaderText="NTEID" />
@@ -181,7 +181,7 @@
                         <div class="panel-body">
                             <div style="width: 100%; overflow-x: scroll;">
                                 <asp:GridView runat="server" ID="gvNTE_Provision" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
-                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination">
+                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnPageIndexChanging="gvNTE_Provision_PageIndexChanging">
                                     <Columns>
                                 <asp:BoundField DataField="CODID" HeaderText="CODID" />
                                 <asp:BoundField DataField="NTEID" HeaderText="NTEID" />

@@ -156,7 +156,7 @@ namespace ClaimsSystem
         {
             if (e.CommandName == "Select")
             {
-                int _index = Convert.ToInt32(e.CommandArgument);
+                int _index = Convert.ToInt32(e.CommandArgument) % gvTNCRList.PageSize;
                 GridViewRow _row = gvTNCRList.Rows[_index];
                 hfTNCRID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
                 txtTNCR_ID.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
@@ -191,7 +191,9 @@ namespace ClaimsSystem
 
         protected void gvTNCRList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-
+            gvTNCRList.PageIndex = e.NewPageIndex;
+            gvTNCRList.DataSource = Retrieve_Header();
+            gvTNCRList.DataBind();
         }
 
         protected void gvTNCRList_SelectedIndexChanged(object sender, EventArgs e)

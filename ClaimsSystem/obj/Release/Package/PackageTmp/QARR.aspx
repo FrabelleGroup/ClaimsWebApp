@@ -43,9 +43,34 @@
                         <div class="panel-body">
                             <div style="width: 100%; overflow-x: scroll;">
                                 <asp:GridView runat="server" ID="gvQARRList" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
-                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination">
+                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvQARRList_RowCommand">
                                     <Columns>
-
+                                    <asp:BoundField DataField="QARRID" HeaderText="QARRID" />
+                                    <asp:BoundField DataField="CompanyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="ReferenceCode" HeaderText="ReferenceCode" />
+                                    <asp:BoundField DataField="ReferenceDate" HeaderText="ReferenceDate" DataFormatString="{0:d}" />
+                                    <asp:BoundField DataField="IssuedTo" HeaderText="IssuedTo" />
+                                    <asp:BoundField DataField="SupplierID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Department" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="InitiatedBy" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NotedBy" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Subject" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Type_Legal" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Type_Product" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Type_Procedure" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Type_StructuralAndSanitation" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Type_Other" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="Type_OtherRemarks" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NC_SupplierServiceProvider" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NC_FBC" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NC_Toll" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NC_ADP" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NC_Trucker" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NC_Other" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="NC_OtherRemarks" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="SummaryReport" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="DateCreated" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" DataFormatString="{0:d}" />
+                                    <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
 
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>

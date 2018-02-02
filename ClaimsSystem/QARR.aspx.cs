@@ -156,7 +156,7 @@ namespace ClaimsSystem
         {
             if (e.CommandName == "Select")
             {
-                int _index = Convert.ToInt32(e.CommandArgument);
+                int _index = Convert.ToInt32(e.CommandArgument) % gvQARRList.PageSize;
                 GridViewRow _row = gvQARRList.Rows[_index];
                 hfQARRID.Value =_row.Cells[0].Text.Replace("&nbsp;", "");
                 txtQARR_ID.Text = _row.Cells[0].Text.Replace("&nbsp;", ""); 
@@ -193,7 +193,8 @@ namespace ClaimsSystem
 
         protected void gvQARRList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-
+            gvQARRList.PageIndex = e.NewPageIndex;
+            _gc.DeserializeDataTable(_wcf.Get_Qa_Report(""), gvQARRList);
         }
 
         protected void gvQARRList_SelectedIndexChanged(object sender, EventArgs e)

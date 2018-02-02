@@ -227,8 +227,8 @@
                         <div class="panel-body">
                             <div style="width: 100%; overflow-x: scroll;">
                                 <asp:GridView runat="server" ID="gvLNCRDetailReport" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
-                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvLNCRList_RowCommand" OnPageIndexChanging="gvLNCRList_PageIndexChanging"
-                                    OnSelectedIndexChanged="gvLNCRList_SelectedIndexChanged">
+                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnPageIndexChanging="gvLNCRDetailReport_PageIndexChanging"
+                                    >
                                     <Columns>
                                     <asp:BoundField DataField="LNCRBodyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
                                     <asp:BoundField DataField="LNCRHeadID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
@@ -242,8 +242,7 @@
 
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
-                                                <asp:LinkButton runat="server" ID="lnkSelect" CausesValidation="false" CommandName="Select" CssClass="btn btn-primary" title="Select"
-                                                    CommandArgument='<%# Container.DataItemIndex %>' data-rel="tooltip"><i class="glyphicon glyphicon-th-list"></i></asp:LinkButton>
+                                  
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>

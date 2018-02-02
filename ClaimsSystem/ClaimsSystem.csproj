@@ -179,6 +179,7 @@
     <Content Include="NTE.aspx" />
     <Content Include="QARR.aspx" />
     <Content Include="Reports.aspx" />
+    <None Include="Properties\PublishProfiles\jonas.pubxml" />
     <None Include="Service References\ServiceReference1\Claims.disco" />
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
     <None Include="Service References\ServiceReference1\configuration.svcinfo" />

@@ -43,14 +43,43 @@
                         <div class="panel-body">
                             <div style="width: 100%; overflow-x: scroll;">
                                 <asp:GridView runat="server" ID="gvTNCRList" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
-                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination">
+                                    HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvTNCRList_RowCommand">
                                     <Columns>
-
+                                        <asp:BoundField DataField="TallID" HeaderText="TallID" />
+                                        <asp:BoundField DataField="CompanyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Date" HeaderText="Date" DataFormatString="{0:d}" />
+                                        <asp:BoundField DataField="TotalAffected" HeaderText="TotalAffected" />
+                                        <asp:BoundField DataField="TotalAffectedAmount" HeaderText="TotalAffectedAmount" />
+                                        <asp:BoundField DataField="InventoryVariance" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="RawMaterials" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="FinishedGoods" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="TechnicalScrap" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="YieldVariances" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="ConsumptionVariance" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="DelayReport" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="QADeviation" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="WrongLabel" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="ShortLacking" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="QANonConformance" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="WeakSeal" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Bursting" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="LoosePack" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Rejects" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Contamination" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="SwabGMPSanitation" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Others" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="OthersRemarks" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="PreparedByID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="ReceivedByID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="AcknowledgeByID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Remarks" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Toller" HeaderText="Toller" />
 
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
                                                 <asp:LinkButton runat="server" ID="lnkSelect" CausesValidation="false" CommandName="Select" CssClass="btn btn-primary" title="Select"
-                                                    CommandArgument='<%# Container.DataItemIndex %>' data-rel="tooltip"><i class="glyphicon glyphicon-th-list"></i></asp:LinkButton>
+                                                     CommandArgument='<%# Container.DataItemIndex %>' data-rel="tooltip"><i class="glyphicon glyphicon-th-list"></i></asp:LinkButton>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
@@ -65,7 +94,7 @@
             </div>
         </asp:View>
         <asp:View ID="vwDetailsTNCR" runat="server">
-            <asp:HiddenField ID="hfTNCRID" runat="server" Visible="false" />
+            <asp:HiddenField ID="hfTNCRID" value="0" runat="server" Visible="false" />
             <div class="row">
                 <div class="col-md-12">
                     <h3>Toll Non-Conformance Report (TNCR)</h3>
@@ -248,10 +277,10 @@
             <br />
             <div class="row">
                 <div class="col-md-2">
-                    <asp:Button ID="btnTNCRDetails_Submit" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Submit" />
+                    <asp:Button ID="btnTNCRDetails_Submit" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Submit" OnClick="btnTNCRDetails_Submit_Click" />
                 </div>
                 <div class="col-md-2">
-                    <asp:Button ID="btnTNCRDetails_Cancel" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="Cancel" />
+                    <asp:Button ID="btnTNCRDetails_Cancel" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="Cancel" OnClick="btnTNCRDetails_Cancel_Click" />
                 </div>
             </div>
             <br />
@@ -276,11 +305,11 @@
                     <div class="row">
                         <div class="col-md-7"></div>
                         <div class="col-md-2">
-                            <asp:Button ID="btnTNCRDetails_SaveYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" />
-                            <asp:Button ID="btnTNCRDetails_CancelYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" />
+                            <asp:Button ID="btnTNCRDetails_SaveYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" OnClick="btnTNCRDetails_SaveYes_Click" />
+                            <asp:Button ID="btnTNCRDetails_CancelYes" runat="server" CssClass="btn btn-md btn-success btn-block" Text="Yes" OnClick="btnTNCRDetails_CancelYes_Click" />
                         </div>
                         <div class="col-md-2">
-                            <asp:Button ID="btnTNCRDetails_No" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="No" />
+                            <asp:Button ID="btnTNCRDetails_No" runat="server" CssClass="btn btn-md btn-danger btn-block" Text="No" OnClick="btnTNCRDetails_No_Click" />
                         </div>
                     </div>
                     <br />

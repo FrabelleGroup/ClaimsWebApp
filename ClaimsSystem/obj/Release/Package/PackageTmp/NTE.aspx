@@ -46,7 +46,16 @@
                                     HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvNTEList_RowCommand" OnPageIndexChanging="gvNTEList_PageIndexChanging"
                                     OnSelectedIndexChanged="gvNTEList_SelectedIndexChanged">
                                     <Columns>
-
+                                        <asp:BoundField DataField="NTEID" HeaderText="NTEID" />
+                                        <asp:BoundField DataField="CompanyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="DATE" HeaderText="DATE" DataFormatString="{0:d}" />
+                                        <asp:BoundField DataField="EmployeeName" HeaderText="EmployeeName" />
+                                        <asp:BoundField DataField="Subject" HeaderText="Subject" />
+                                        <asp:BoundField DataField="IncidentDateTime" HeaderText="IncidentDateTime" DataFormatString="{0:d}" />
+                                        <asp:BoundField DataField="IncidentLocation" HeaderText="IncidentLocation" />
+                                        <asp:BoundField DataField="IncidentSuspensionDays" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Remarks" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
 
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
@@ -135,8 +144,10 @@
                                 <asp:GridView runat="server" ID="gvNTEProvision" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
                                     HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination">
                                     <Columns>
-
-
+                                    <asp:BoundField DataField="OffenseID" HeaderText="OffenseID" />
+                                    <asp:BoundField DataField="NTEID" HeaderText="NTEID" />
+                                    <asp:BoundField DataField="Details" HeaderText="Details" />
+                                        <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
                                                 <asp:LinkButton runat="server" ID="lnkSelect" CausesValidation="false" CommandName="Select" CssClass="btn btn-primary" title="Select"
@@ -172,8 +183,12 @@
                                 <asp:GridView runat="server" ID="gvNTE_Provision" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover" AllowPaging="true" PageSize="10"
                                     HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination">
                                     <Columns>
-
-
+                                <asp:BoundField DataField="CODID" HeaderText="CODID" />
+                                <asp:BoundField DataField="NTEID" HeaderText="NTEID" />
+                                <asp:BoundField DataField="Sec" HeaderText="Sec" />
+                                <asp:BoundField DataField="Para" HeaderText="Para" />
+                                <asp:BoundField DataField="Provision" HeaderText="Provision" />
+                                <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
                                                 <asp:LinkButton runat="server" ID="lnkSelect" CausesValidation="false" CommandName="Select" CssClass="btn btn-primary" title="Select"
@@ -219,7 +234,7 @@
                                 <div class="col-md-4">
                                     <asp:Label ID="lblNTEOffense_OffenseID" runat="server" Text="Offense ID" />
                                     <asp:TextBox ID="txtNTEOffense_OffenseID" runat="server" placeholder="Offense ID" CssClass="form-control" ReadOnly="true" />
-                                    <asp:HiddenField ID="hfNTEOffense_NTEID" runat="server" Visible="false" />
+                                    <asp:HiddenField ID="hfNTEOffense_NTEID" runat="server" value="0" Visible="false" />
                                 </div>
                             </div>
                             <br />
@@ -257,7 +272,7 @@
                                 <div class="col-md-4">
                                     <asp:Label ID="lblNTEProvision_CODID" runat="server" Text="COD ID" />
                                     <asp:TextBox ID="txtNTEProvision_CODID" runat="server" placeholder="COD ID" CssClass="form-control" ReadOnly="true" />
-                                    <asp:HiddenField ID="hfNTEProvision_NTEID" runat="server" Visible="false" />
+                                    <asp:HiddenField ID="hfNTEProvision_NTEID" value="0" runat="server" Visible="false" />
                                 </div>
                             </div>
                             <br />

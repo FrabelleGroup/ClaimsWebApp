@@ -205,7 +205,7 @@ namespace ClaimsSystem
         {
             if (e.CommandName == "Select")
             {
-                int _index = Convert.ToInt32(e.CommandArgument);
+                int _index = Convert.ToInt32(e.CommandArgument) % gvLNCRList.PageSize;
                 GridViewRow _row = gvLNCRList.Rows[_index];
                 hfLNCRID.Value = _row.Cells[0].Text.Replace("&nbsp;", "");
                 txtLNCR_ID.Text= _row.Cells[0].Text.Replace("&nbsp;", "");
@@ -228,9 +228,9 @@ namespace ClaimsSystem
                 chkLNCR_Cat_Others.Checked = _gc.Load_CheckBox(_row.Cells[16].Text.Replace("&nbsp;", ""));
                 txtLNCR_Cat_Others.Text = _row.Cells[17].Text.Replace("&nbsp;", "");
                 chkLNCR_Pen_WrittenWarning.Checked = _gc.Load_CheckBox(_row.Cells[18].Text.Replace("&nbsp;", ""));
-                chkLNCR_Pen_Charge.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
-                chkLNCR_Pen_Others.Checked = _gc.Load_CheckBox(_row.Cells[0].Text.Replace("&nbsp;", ""));
-                txtLNCR_Pen_Others.Text = _row.Cells[0].Text.Replace("&nbsp;", "");
+                chkLNCR_Pen_Charge.Checked = _gc.Load_CheckBox(_row.Cells[19].Text.Replace("&nbsp;", ""));
+                chkLNCR_Pen_Others.Checked = _gc.Load_CheckBox(_row.Cells[20].Text.Replace("&nbsp;", ""));
+                txtLNCR_Pen_Others.Text = _row.Cells[21].Text.Replace("&nbsp;", "");
                 gvLNCRDetailReport.DataSource = Retrieve_Body();
                 gvLNCRDetailReport.DataBind();
                 mvLNCR.SetActiveView(vwDetailsLNCR);
@@ -239,13 +239,26 @@ namespace ClaimsSystem
 
         protected void gvLNCRList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-
+            gvLNCRList.PageIndex = e.NewPageIndex;
+            gvLNCRList.DataSource = Retrieve_Header();
+            gvLNCRList.DataBind();
         }
 
         protected void gvLNCRList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+
+
+        protected void gvLNCRDetailReport_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvLNCRDetailReport.PageIndex = e.NewPageIndex;
+            gvLNCRDetailReport.DataSource = Retrieve_Body();
+            gvLNCRDetailReport.DataBind();
+        }
+
+
 
         #endregion
 

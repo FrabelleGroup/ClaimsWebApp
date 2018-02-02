@@ -46,12 +46,37 @@
                                     HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvLNCRList_RowCommand" OnPageIndexChanging="gvLNCRList_PageIndexChanging"
                                     OnSelectedIndexChanged="gvLNCRList_SelectedIndexChanged">
                                     <Columns>
-
+                                        <asp:BoundField DataField="LNCRHeadID" HeaderText="LNCRHeadID" />
+                                        <asp:BoundField DataField="CompanyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="SupplierID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="DriverName" HeaderText="DriverName" />
+                                        <asp:BoundField DataField="Helper" HeaderText="Helper" />
+                                        <asp:BoundField DataField="Date" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" DataFormatString="{0:d}" />
+                                        <asp:BoundField DataField="ChargeSlipDate" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" DataFormatString="{0:d}" />
+                                        <asp:BoundField DataField="TransactionDate" HeaderText="TransactionDate" DataFormatString="{0:d}" />
+                                        <asp:BoundField DataField="DateCreated" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" DataFormatString="{0:d}" />
+                                        <asp:BoundField DataField="Category_Shortages" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_LateLiquidation" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_LateArrival" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_NoShow" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_LateDelivery" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_NonDelivery" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_QualityRelated" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_Others" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Category_OthersRemarks" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Penalty_WrittenWarning" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Penalty_Charge" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Penalty_Others" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Penalty_OthersRemarks" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="PreparedBy" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="AcknowledgeBy" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="ApprovedBy" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                        <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
 
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
                                                 <asp:LinkButton runat="server" ID="lnkSelect" CausesValidation="false" CommandName="Select" CssClass="btn btn-primary" title="Select"
-                                                    CommandArgument='<%# Container.DataItemIndex %>' data-rel="tooltip"><i class="glyphicon glyphicon-th-list"></i></asp:LinkButton>
+                                                     CommandArgument='<%# Container.DataItemIndex %>' data-rel="tooltip"><i class="glyphicon glyphicon-th-list"></i></asp:LinkButton>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
@@ -66,7 +91,7 @@
             </div>
         </asp:View>
         <asp:View ID="vwDetailsLNCR" runat="server">
-            <asp:HiddenField ID="hfLNCRID" runat="server" Visible="false" />
+            <asp:HiddenField ID="hfLNCRID" value="0" runat="server" Visible="false" />
             <div class="row">
                 <div class="col-md-12">
                     <h3>Logistics Non-Conformance Report (LNCR)</h3>
@@ -205,7 +230,15 @@
                                     HeaderStyle-HorizontalAlign="Center" PagerStyle-CssClass="pagination" OnRowCommand="gvLNCRList_RowCommand" OnPageIndexChanging="gvLNCRList_PageIndexChanging"
                                     OnSelectedIndexChanged="gvLNCRList_SelectedIndexChanged">
                                     <Columns>
-
+                                    <asp:BoundField DataField="LNCRBodyID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="LNCRHeadID" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
+                                    <asp:BoundField DataField="DocumentReferenceNo" HeaderText="DocumentReferenceNo" />
+                                    <asp:BoundField DataField="ItemCustomer" HeaderText="ItemCustomer" />
+                                    <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+                                    <asp:BoundField DataField="UnitOfMeasurement" HeaderText="UnitOfMeasurement" />
+                                    <asp:BoundField DataField="Amount" HeaderText="Amount" />
+                                    <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
+                                    <asp:BoundField DataField="Status" HeaderStyle-CssClass="hide" ItemStyle-CssClass="hide" />
 
                                         <asp:TemplateField ItemStyle-Width="5%" ShowHeader="False" HeaderText="Action" ItemStyle-HorizontalAlign="Center">
                                             <ItemTemplate>
@@ -247,6 +280,7 @@
                                 <div class="col-md-4">
                                     <asp:Label ID="lblLNCReport_DocumentReferenceNo" runat="server" Text="Document Reference No" />
                                     <asp:TextBox ID="txtLNCRReport_DocumentReferenceNo" runat="server" placeholder="Document Reference No" CssClass="form-control" />
+                                                <asp:HiddenField ID="hfLNCRBodyID" value="0" runat="server" Visible="false" />
                                 </div>
                                 <div class="col-md-4">
                                     <asp:Label ID="lblLNCReports_ItemCustomer" runat="server" Text="Item / Customer" />
